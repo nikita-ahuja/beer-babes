@@ -1,0 +1,63 @@
+body{
+    background-color: #DBCA64;
+}
+
+
+h1{
+    font-family: 'Zilla Slab';font-size: 22px;
+}
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.cc-selector-2 input{
+    position:absolute;
+    z-index:999;
+}
+
+.beer-glass{background-image:url('beer-glass.png');}
+
+.cc-selector-2 input:active +.beer-glass, .cc-selector input:active +.beer-glass{opacity: .9;}
+.cc-selector-2 input:checked +.beer-glass, .cc-selector input:checked +.beer-glass{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.beer-glass{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.3);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.3);
+            filter: brightness(1.8) grayscale(1) opacity(.3);
+}
+.beer-glass:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+            filter: brightness(1.2) grayscale(.5) opacity(1);
+}
+
+span {
+    letter-spacing: 100px;
+    position: relative;
+    margin:auto;
+    left: 30px;
+    font-family: 'Sofia';font-size: 15px;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    text-align: center
+    /*margin-top: 50px;*/
+}
+
