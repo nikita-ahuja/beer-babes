@@ -7,22 +7,22 @@ h1{
     font-family: 'Zilla Slab';font-size: 22px;
 }
 
-.cc-selector input{
+.beer-preference input{
     margin:0;padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
 }
 
-.cc-selector-2 input{
+.beer-preference input{
     position:absolute;
     z-index:999;
 }
 
 .beer-glass{background-image:url('beer-glass.png');}
 
-.cc-selector-2 input:active +.beer-glass, .cc-selector input:active +.beer-glass{opacity: .9;}
-.cc-selector-2 input:checked +.beer-glass, .cc-selector input:checked +.beer-glass{
+.beer-preference input:active +.beer-glass, .beer-preference input:active +.beer-glass{opacity: .9;}
+.beer-preference input:checked +.beer-glass, .beer-preference input:checked +.beer-glass{
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
@@ -51,12 +51,29 @@ span {
     position: relative;
     margin:auto;
     left: 30px;
-    font-family: 'Zilla Slab';font-size: 15px;
+    font-family: 'Zilla Slab';
+    font-size: 15px;
 }
 
 .container {
     position: relative;
     margin: auto;
     text-align: center
+}
+
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: transparent;
+    font-family: 'Zilla Slab';
+    font-size: 15px;
+    margin:auto;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
 }
 
