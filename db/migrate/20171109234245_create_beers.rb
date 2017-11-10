@@ -2,7 +2,10 @@ class CreateBeers < ActiveRecord::Migration[5.1]
   def change
     create_table :beers do |t|
     	t.string :name
-    	t.string :api_id
+      t.string :style
+      t.string :city
+      t.string :brewery
+      t.string :image
     	t.boolean :independent
 
       t.timestamps

@@ -1,0 +1,30 @@
+<div class class="profile-container">
+  <h2>Profile Page</h2>
+
+  <!-- profile pic -->
+
+  <!-- quiz results / preferences based on quiz -->
+
+  <!-- form to add beer rating/review/notes -->
+  <%= form_with scope: :review, local: true do |form| %>
+    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
+
+    <%= form.text_field :name, :placeholder => "Type" %><br><br>
+
+    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
+
+    <%= form.submit 'Save' %>
+  <% end %>
+
+  <!-- beer suggestions based on personal reviews -->
+
+  <!-- beer suggessions based on others who share the same preferences (from quiz) -->
+
+  <!-- testing api -->
+  <% if @beers %>
+    <% @beers.each do |beer| %>
+        <p>API ID: <%= beer.id %>, NAME: <%= beer.name %>, STYLE: <%= beer.style.name %> | DESCRIPTION: <%= beer.description %></p>
+    <% end %>
+  <% end %>
+
+</div>
