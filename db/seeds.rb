@@ -22,3 +22,19 @@ beers = Beer.create([
   { name: "Deschutes Mirror Pond", style: "Pale Ale", brewery: "Deschutes", independent: true, city: "Bend", image: "https://cdn.pastemagazine.com/www/articles/assets_c/2017/04/deschutes%20mirror%20pond%20retouch-thumb-220x334-608350.jpg" },
   { name: "Nectarine Premiere", style: "Saison", brewery: "Garde Brewing", independent: true, city: "Tillamook", image: "https://cdn.beeradvocate.com/im/c_beer_image.gif" },
   ])
+
+users = 10.times.map do
+ User.create!( :username => Faker::Name.first_name,
+               :email      => Faker::Internet.email,
+               :password   => 'password' )
+end
+
+reviews = 100.times.map do
+  Review.create(comments: Faker::Hipster.paragraph,
+                notes: Faker::Hipster.sentence,
+                date: Date.now,
+                location: "Austin"
+                beer_id: rand(1..16),
+                user_id: rand(1..10),
+                rating: [1, 2, 3, 4, 5].sample)
+end
