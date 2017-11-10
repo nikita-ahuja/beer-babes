@@ -1,5 +1,5 @@
 class BreweryApi
-	CLIENT =  BreweryDB::Client.new do |config|
+	CLIENT = BreweryDB::Client.new do |config|
 		config.api_key = ENV['BREWERYDB_API_KEY']
 	end
 end
