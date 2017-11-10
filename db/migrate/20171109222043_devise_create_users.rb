@@ -6,6 +6,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      # beer quize
+      t.integer :light_rating
+      t.integer :dark_rating
+      t.integer :hoppy_rating
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
