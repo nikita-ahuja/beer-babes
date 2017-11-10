@@ -32,8 +32,8 @@ end
 reviews = 100.times.map do
   Review.create(comments: Faker::Hipster.paragraph,
                 notes: Faker::Hipster.sentence,
-                date: Date.now,
-                location: "Austin"
+                date: Date.new(2017,11,11),
+                location: "Austin",
                 beer_id: rand(1..16),
                 user_id: rand(1..10),
                 rating: [1, 2, 3, 4, 5].sample)
