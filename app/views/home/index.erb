@@ -1,9 +1,5 @@
 
 
-
-
-
-
 <% if user_signed_in? %>
   <p class="navbar-text pull-right">
     Logged in as <strong><%= current_user.email %></strong>.
@@ -14,9 +10,6 @@
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
     <% end %>
   </p>
-
-
   
-    
-
-      
+ <%= link_to "QUIZ", "#quiz", "data-toggle" => "modal" %>
+  <%= render "devise/quiz" %>
