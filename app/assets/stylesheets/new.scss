@@ -1,0 +1,90 @@
+/*body{
+    background-color: #DBCA64;
+}*/
+
+
+#new_user {
+    margin-left: 2em
+}
+
+h1{
+    font-family: 'Zilla Slab' 22px;
+}
+
+.quiz-container {
+    background-color: #DBCA64;
+    border-radius: 3%;
+}
+
+.beer-preference input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none
+}
+
+.beer-preference input{
+    position:absolute;
+    z-index:999
+}
+
+.beer-glass{background-image:url('beer-glass.png');}
+
+.beer-preference input:active +.beer-glass, .beer-preference input:active +.beer-glass{opacity: .9;}
+
+.beer-preference input:checked +.beer-glass, .beer-preference input:checked +.beer-glass{
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none
+}
+
+.beer-glass{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.3);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(.3);
+    filter: brightness(1.8) grayscale(1) opacity(.3)
+}
+.beer-glass:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+    filter: brightness(1.2) grayscale(.5) opacity(1)
+}
+
+span {
+    letter-spacing: 100px;
+    position: relative;
+    margin:auto;
+    left: 30px;
+    font-family: 'Zilla Slab';
+    font-size: 15px
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    text-align: center
+}
+
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: transparent;
+    font-family: 'Zilla Slab';
+    font-size: 15px;
+    margin:auto;
+    text-align: center
+}
+
+.button:hover {
+    background-color: black;
+    color: white
+}
+
