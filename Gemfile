@@ -64,4 +64,6 @@ gem 'autoprefixer-rails'
 
 gem 'faker'
 
+gem 'pry'
 gem "animate-rails"
+
