@@ -9,11 +9,10 @@ $(".beer-form-button").on("click", function(e){
 
 });
 
-$(".modal-body").hide();
 $(".more-information").on("click", function(e){
   e.preventDefault();
-  console.log("it worked")
-  $(".modal-body").toggle("#quiz-here");
+  $(".modal-body").show("#quiz-here");
+  $(this).hide();
 
 });
 
