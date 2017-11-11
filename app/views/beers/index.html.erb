@@ -1,7 +1,10 @@
+<div class="transbox">
 <h1>My Beers</h1>
 
-
+<ul>
 <% @beers.each do |beer| %>
-  <%= beer.name %>
-
+  <h5><%= link_to beer.name %> <li class="fa fa-beer" aria-hidden="true"></li>  <%= beer.reviews.first.rating%></h5>
+  <p> </p>
 <% end %>
+</ul>
+</div>
