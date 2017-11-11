@@ -2,12 +2,24 @@
 <h1>My Beers</h1>
 
 <ul>
-<% @beers.each do |beer| %>
-  <h5><%= link_to beer.name %> <li class="fa fa-beer" aria-hidden="true"></li>  <%= beer.reviews.first.rating%></h5>
-  <p> </p>
+<% @beers.each_with_index do |beer, index| %>
+  <h5><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse}  %>  
+  	<% beer.reviews.first.rating.times do %>
+  	<li class='fa fa-beer' aria-hidden='true'></li>
+  	<% end %>
+  	</h5>
+  <div id="beer-info<%= index.to_s %>">
+  <div id="beer-comment">
+  	<strong>Comment</strong><br>
+  	<%= beer.reviews.first.comments %>
+  </div>
+  <div id="beer-note">
+  	<strong>My Notes</strong><br>
+  	<%= beer.reviews.first.notes %>
+  </div>
+</div>
 <% end %>
 </ul>
-
 
 <br></br>
   <button type="button" class="beer-form-button">+ Add a beer</button>
@@ -25,3 +37,4 @@
   <% end %>
 </form>
 </div>
+

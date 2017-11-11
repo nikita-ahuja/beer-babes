@@ -13,9 +13,11 @@ div.transbox {
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
-div.transbox h5 {
+div.transbox ul {
     margin: 2%;
     color: black;
+    text-align: left;
+    text-align: justify;
 }
 
 .fa-beer {
