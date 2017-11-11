@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/profile' => 'users#show'
 
   # get 'home/index'
-  root :to => "home#index"
+  devise_scope :user do
+    root to: "devise/registrations#new"
+  end
 end
