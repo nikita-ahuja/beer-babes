@@ -7,4 +7,21 @@
   <p> </p>
 <% end %>
 </ul>
+
+
+<br></br>
+  <button type="button" class="beer-form-button">+ Add a beer</button>
+  <br></br>
+
+  <form class="add-a-beer">
+  <%= form_with scope: :review, local: true do |form| %>
+    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
+
+    <%= form.text_field :name, :placeholder => "Type" %><br><br>
+
+    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
+
+    <%= form.submit 'Save' %>
+  <% end %>
+</form>
 </div>

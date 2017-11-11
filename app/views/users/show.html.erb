@@ -6,21 +6,7 @@ Welcome, <%= current_user.username %>
   <!-- quiz results / preferences based on quiz -->
 
   <!-- form to add beer rating/review/notes -->
-  <br></br>
-  <button type="button" class="beer-form-button">+ Add a beer</button>
-  <br></br>
 
-  <form class="add-a-beer">
-  <%= form_with scope: :review, local: true do |form| %>
-    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
-
-    <%= form.text_field :name, :placeholder => "Type" %><br><br>
-
-    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
-
-    <%= form.submit 'Save' %>
-  <% end %>
-</form>
 
   <!-- beer suggestions based on personal reviews -->
 
