@@ -66,4 +66,5 @@ gem 'faker'
 
 gem 'pry'
 gem "animate-rails"
+gem "font-awesome-rails"
 
