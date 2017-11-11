@@ -1,4 +1,6 @@
-.intro-2 {
+/*.intro-2 */
+
+body {
     background: url("beerbg.jpg")no-repeat center center;
     background-size: cover;
 
@@ -41,4 +43,14 @@ h6 {
     .full-height header .view {
         height: 1040px;
     }
+}
+
+.nav-item {
+    list-style-type: none;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+
+.navbar-brand {
+    font-size:  36px;
 }
