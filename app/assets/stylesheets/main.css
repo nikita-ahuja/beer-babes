@@ -44,3 +44,13 @@ h6 {
         height: 1040px;
     }
 }
+
+.nav-item {
+    list-style-type: none;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+
+.navbar-brand {
+    font-size:  36px;
+}
