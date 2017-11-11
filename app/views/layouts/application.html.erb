@@ -6,17 +6,21 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href='https://fonts.googleapis.com/css?family=Zilla Slab' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+  rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   </head>
 
   <body>
 
 <!--     <%# if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <p class="alert alert-success"><#%= notice %></p>
     <%# end %>
     <%# if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger"><#%= alert %></p>
     <%# end %>
  -->
 
@@ -25,20 +29,21 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
-                <a class="navbar-brand" href="#"><strong>Beer Babes</strong></a>
+                <a class="navbar-brand" href="/"><strong>Beer Babes</strong></a>
                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
+
                             <a class="nav-link" href="#">My Beers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="/profile">Profile</a>
                         </li>
                     </ul>
                     <!-- <form class="form-inline">
@@ -54,20 +59,8 @@
                 <div class="container flex-center">
                     <div class="d-flex align-items-center content-height">
                         <div class="row flex-center pt-5 mt-3">
-                            <div class="col-md-6 text-center text-md-left mb-5">
-                                <div class="white-text">
-                                    <h1 class="h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h1>
-                                    <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
-                                    <h6 class="wow fadeInLeft" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.</h6>
-                                    <br>
-                                    <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
-                                </div>
-                            </div>
+                             <%= yield %>
 
-                            <div class="col-md-6 col-xl-5 offset-xl-1">
-                                <!-- form goes here!!! -->
-                                    <%= yield %>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,5 +93,9 @@
 
     </main>
     <!--Main Layout-->
+
+    <script type= "text/javascript">
+      new WOW().init();
+    </script>
   </body>
 </html>

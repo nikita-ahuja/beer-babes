@@ -54,3 +54,13 @@ h6 {
 .navbar-brand {
     font-size:  36px;
 }
+
+
+#quiz-here{
+    /*background-color: red;*/
+    float: right;
+    left: 500px;
+    position: relative;
+    bottom: 500px;
+
+}
