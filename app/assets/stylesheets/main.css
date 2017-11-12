@@ -108,18 +108,3 @@ h6 {
 .nav-item .search-bar-form {
     padding-left: 27em ;
 }
-
-.profile-display {
-    /*padding-top: 50px;*/
-    margin: auto;
-    position: relative;
-    background-color: white;
-    opacity: 0.7;
-    /*max-width: 30%;*/
-    /*padding: 30px;*/
-
-}
-
-.transbox {
-    margin: auto;
-}
