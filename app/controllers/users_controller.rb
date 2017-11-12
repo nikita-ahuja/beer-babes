@@ -2,7 +2,7 @@
 class UsersController < ApplicationController
   include SessionsHelper
 
-  before_action :require_login, only: [:edit, :update]
+  before_action :require_login, only: [:show, :edit, :update, :destroy]
 
   def new
     @user = User.new
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = User.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
     redirect_to root_url if current_user.nil?
 
     @suggestions = []

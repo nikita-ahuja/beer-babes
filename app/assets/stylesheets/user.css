@@ -11,7 +11,7 @@ a:hover > div {
   opacity: 0.6;
   filter: alpha(opacity=60); /* for IE* and earlier */
   border-radius: 10px;
-  padding: 5% 10% 10% 15%;
+  padding: 5% 5% 10% 5%;
   width: 70%;
   margin: auto;
 }
