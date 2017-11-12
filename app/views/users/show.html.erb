@@ -2,8 +2,28 @@
   <h1>Welcome, <%= @current_user.username %></h1>
 
   <!-- PROFILE PICTURE -->
-  
+
   <!-- quiz results / preferences based on quiz -->
+  <div class="quiz-result-display">
+    Here are your personal preferences:
+    <br></br>
+    Light beer ranking: <%= @current_user.light_rating %>
+    <br></br>
+    Dark beer ranking: <%= @current_user.dark_rating %>
+    <br></br>
+    Hoppy beer ranking: <%= @current_user.hoppy_rating %>
+    <br>
+    <% if @current_user.light_rating == 4 ||  @current_user.light_rating == 5 %>
+      <%= "You are a hoppy lover!" %>
+    <% else %>
+      <%= "Test" %>
+    <% end %>
+  </div>
+
+  <br></br>
+
+
+
 
   <!-- SUGGESIONS PER REVIEW -->
   <% if @suggestions %>
@@ -29,4 +49,4 @@
 
 </div>
 
- 
+
