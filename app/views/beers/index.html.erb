@@ -9,6 +9,7 @@
   	<% end %>
   	</h5>
   <div id="beer-info<%= index.to_s %>">
+  		<img id="beer-image" src="<%= beer.image %>">
   <div id="beer-comment">
   	<strong>Comment</strong><br>
   	<%= beer.reviews.first.comments %>
