@@ -2,8 +2,8 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :beers, through: :reviews
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  validates :username, :email, :password, presence: true
+  validates :email, uniqueness: true
+
+  has_secure_password
 end

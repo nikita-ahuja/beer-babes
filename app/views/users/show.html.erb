@@ -2,7 +2,7 @@
   <h2>Profile Page</h2>
 
   <!-- profile pic -->
-Welcome, <%= current_user.username %>
+Welcome, <%= current_user.username.upcase %>
   <!-- quiz results / preferences based on quiz -->
 
   <!-- form to add beer rating/review/notes -->
@@ -19,4 +19,8 @@ Welcome, <%= current_user.username %>
     <% end %>
   <% end %>
 
+ <%= render 'shared/links' %>
+
 </div>
+
+ 

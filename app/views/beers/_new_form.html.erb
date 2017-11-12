@@ -1,0 +1,13 @@
+<form class="add-beer-form">
+  <%= form_with scope: :review, local: true do |form| %>
+    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
+
+    <%= form.text_field :name, :placeholder => "Type" %><br><br>
+
+    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
+
+    <%= form.text_area :name, :placeholder => "Notes" %><br><br>
+
+    <%= form.submit 'Save' %>
+  <% end %>
+</form>

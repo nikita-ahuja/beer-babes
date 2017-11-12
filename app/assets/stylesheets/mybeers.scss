@@ -1,0 +1,64 @@
+// Place all the styles related to the beers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.beer-box {
+    margin-left: 10%;
+    margin-right: 15%;
+    padding: 7% 12% 50% 8%; /* Top, Left, bottom, right */
+    background-color: rgba(229, 228, 255, 0.2);  
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.beer-box h1 {
+    font-family: "Pacifico";
+}
+
+.beer-box ul {
+     padding-top: 6%;
+}
+
+.beer-box ul h4 {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.beer-box .mybeer-info {
+    margin: 2px;
+    padding-bottom: 6%;
+    color: black;
+    text-align: justify;
+}
+
+.fa-beer {
+    color: #ffff00;
+    text-shadow: 3px 3px 8px #272634;
+}
+
+#beer-image {
+    width: 10%;
+    height: 10%;
+}
+
+.beer-form-button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    height: 3.75em;
+    line-height: 3.75em;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: solid 1px !important;
+    color: inherit;
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}

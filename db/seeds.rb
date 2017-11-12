@@ -1,32 +1,31 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 beers = Beer.create([
-  { name: "Live Oak Hefeweizen", style: "Hefeweizen", category: "Hoppy" ,brewery: "Live Oak Brewing Co", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/Live-Oak-Hefeweizen-Ale.jpeg" },
+  { name: "Live Oak Hefeweizen", style: "Hefeweizen", category: "Light" ,brewery: "Live Oak Brewing Co", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/Live-Oak-Hefeweizen-Ale.jpeg" },
   { name: "(512)Pecan Porter", style: "Porter", category: "Dark" ,brewery: "(512)Brewing Co", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/04/512-Brewing-Pecan-Porter.png"},
-  { name: "Fire Eagle", style: "IPA", category: "Light",brewery: "Austin Beerworks", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/fire-eagle-Austin-Beerworks-266x500.jpg"},
+  { name: "Fire Eagle", style: "IPA", category: "Hoppy",brewery: "Austin Beerworks", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/fire-eagle-Austin-Beerworks-266x500.jpg"},
   { name: "Black Medal Farmhouse Imperial Stout", style: "Imperial Stout", category: "Dark", brewery: "Jester King Brewery", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Jester-King-Black-Medal-300x265.jpg" },
   { name: "The One They Call Zoe", style: "Pale Lager", category: "Light", brewery: "Hops and Grain Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Hops-and-Grain-Zoe.jpg" },
   { name: "Convict Hill", style: "Imperial Stout", category: "Dark" , brewery: "Independence Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Independence-Brewing-Convict-Hill-Oatmeal-Stout-439x1024.jpg" },
-  { name: "Buckethead IPA", style: "IPA", category: "Light" ,brewery: "Thirsty Planet Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Thirsty-Planet-Buckethead-IPA.jpg" },
+  { name: "Buckethead IPA", style: "IPA", category: "Hoppy" ,brewery: "Thirsty Planet Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Thirsty-Planet-Buckethead-IPA.jpg" },
   { name: "Meta Modern Session", style: "Session IPA", category: "Hoppy", brewery: "Oasis Texas Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Oasis-Texas-Brewing-Meta-Modern-Session-IPA-1-233x300.jpg" },
   { name: "Tripel B", style: "Belgian Tripel", category: "Light", brewery: " Adelberts Brewery", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Adelberts-Tripel-B-Belgian.jpg" },
   { name: "Sweep The Leg Peanut Butter Stout", style: "Stout", category: "Dark", brewery: "Infamous Brewing", independent: true, city: "Austin", image: "https://craftbeeratx-wpengine.netdna-ssl.com/wp-content/uploads/2016/02/infamous-sweep-the-leg.jpg" },
   { name: "Hijack", style: "Cream Ale", category: "Light", brewery: "Infamous Brewing", independent: true, city: "Austin", image: "http://www.tastings.com/Product-Images/Beer/2016/5_2_2016/214807_s.jpg" },
-  { name: "Widmer Hefeweizen", style: "Hefeweizen", category: "Hoppy", brewery: "Widmer Brothers Brewing", independent: true, city: "Portland", image: "https://cdn.pastemagazine.com/www/articles/widmer-hefe.jpg" },
-  { name: "Deschutes Mirror Pond", style: "Pale Ale", category: "Light", brewery: "Deschutes", independent: true, city: "Bend", image: "https://cdn.pastemagazine.com/www/articles/assets_c/2017/04/deschutes%20mirror%20pond%20retouch-thumb-220x334-608350.jpg" },
-  { name: "Nectarine Premiere", style: "Saison", category: "Hoppy", brewery: "Garde Brewing", independent: true, city: "Tillamook", image: "https://cdn.beeradvocate.com/im/c_beer_image.gif" },
+  { name: "Widmer Hefeweizen", style: "Hefeweizen", category: "Light", brewery: "Widmer Brothers Brewing", independent: true, city: "Portland", image: "https://cdn.pastemagazine.com/www/articles/widmer-hefe.jpg" },
+  { name: "Deschutes Mirror Pond", style: "Pale Ale", category: "Hoppy", brewery: "Deschutes", independent: true, city: "Bend", image: "https://cdn.pastemagazine.com/www/articles/assets_c/2017/04/deschutes%20mirror%20pond%20retouch-thumb-220x334-608350.jpg" },
+  { name: "Nectarine Premiere", style: "Saison", category: "Hoppy", brewery: "Garde Brewing", independent: true, city: "Tillamook", image: "https://scontent-frt3-1.cdninstagram.com/t51.2885-15/s640x640/e35/22581853_379004699200678_413822409662005248_n.jpg" },
   ])
 
 users = 10.times.map do
  User.create!( :username => Faker::Name.first_name,
                :email      => Faker::Internet.email,
-               :password   => 'password',
+               :password   => "password",
                :light_rating => rand(1..5),
                :dark_rating => rand(1..5),
                :hoppy_rating => rand(1..5))
