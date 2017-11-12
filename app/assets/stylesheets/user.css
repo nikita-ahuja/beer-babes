@@ -15,3 +15,7 @@ a:hover > div {
   width: 70%;
   margin: auto;
 }
+
+div.error_messages > ul > li {
+  list-style-type: none;
+}
