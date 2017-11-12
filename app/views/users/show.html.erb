@@ -4,15 +4,17 @@
   <!-- PROFILE PICTURE -->
 
   <!-- quiz results / preferences based on quiz -->
-  <div class="quiz-result-display">
-    Here are your personal preferences:
-    <br></br>
-    Light beer ranking: <%= @current_user.light_rating %>
-    <br></br>
-    Dark beer ranking: <%= @current_user.dark_rating %>
-    <br></br>
-    Hoppy beer ranking: <%= @current_user.hoppy_rating %>
-    <br></br>
+    <!-- <div class="row"> -->
+      <div class="profile-display col-sm-3">
+      <!-- <div class="col-sm-offset-3"> -->
+      Here are your personal preferences:
+      <br></br>
+      Light beer ranking: <%= @current_user.light_rating %>
+      <br></br>
+      Dark beer ranking: <%= @current_user.dark_rating %>
+      <br></br>
+      Hoppy beer ranking: <%= @current_user.hoppy_rating %>
+      <br></br>
 
     Based on these results, you are...
 
@@ -30,35 +32,43 @@
     <% when 4 || 5  %>
       <%= "a beach blonde babe!" %>
     <% end %>
-
-  </div>
-
-  <br></br>
-
-
-
+      <!-- </div> -->
+      </div> <!-- close profile display and col sm -->
+    <!-- </div> -->
 
   <!-- SUGGESIONS PER REVIEW -->
-  <% if @suggestions %>
-  <p>Based on your reviews, here are some suggestions:</p>
+    <!-- <div class="row"> -->
+      <div class="profile-display col-sm-3">
+      <!-- <div class="col-sm-offset-2"> -->
+      <% if @suggestions %>
+      <p>Based on your reviews, here are some suggestions:</p>
 
-      <% @suggestions.each do |suggestion| %>
-      <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
+          <% @suggestions.each do |suggestion| %>
+          <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
+          <% end %>
+
       <% end %>
-
-  <br>
-  <% end %>
+      </div>
+      </div>
+    <!-- </div> -->
 
   <!-- BABE SUGGESTIONS -->
-  <% if @babe_suggestions %>
-    <p>Here are some suggestions based on other users who share the same preferences as you:</p>
+    <!-- <div class="row"> -->
+      <div class="profile-display col-sm-3">
+      <!-- <div class="col-sm-offset-3"> -->
+        <% if @babe_suggestions %>
+          <p>Here are some suggestions based on other users who share the same preferences as you:</p>
 
-    <% @babe_suggestions.each do |babe_suggestion| %>
-      <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
-    <% end %>
-  <% end %>
+          <% @babe_suggestions.each do |babe_suggestion| %>
+            <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
+          <% end %>
+        <% end %>
 
- <%= render 'shared/links' %>
+       <%= render 'shared/links' %>
+      <!-- </div> -->
+    </div>
+    <!-- </div> -->
+  <!-- </div> -->
 
 </div>
 
