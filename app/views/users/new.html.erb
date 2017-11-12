@@ -1,7 +1,5 @@
 <div class="user-container" id="registration">
 
-
-  <h2>Registration Form</h2>
   <%= form_with scope: :user, url: users_path, local: true do |form| %>
 
     <% if @user.errors.any? %>
