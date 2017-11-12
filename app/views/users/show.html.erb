@@ -12,12 +12,25 @@
     Dark beer ranking: <%= @current_user.dark_rating %>
     <br></br>
     Hoppy beer ranking: <%= @current_user.hoppy_rating %>
-    <br>
-    <% if @current_user.light_rating == 4 ||  @current_user.light_rating == 5 %>
-      <%= "You are a hoppy lover!" %>
-    <% else %>
-      <%= "Test" %>
+    <br></br>
+
+    Based on these results, you are...
+
+    <% case @current_user.hoppy_rating %>
+    <% when 4 || 5  %>
+      <%= " a HOP - tometrist!" %>
     <% end %>
+
+    <% case @current_user.dark_rating %>
+    <% when 4 || 5  %>
+      <%= "All about porter and stout!" %>
+    <% end %>
+
+    <% case @current_user.light_rating %>
+    <% when 4 || 5  %>
+      <%= "a beach blonde babe!" %>
+    <% end %>
+
   </div>
 
   <br></br>
