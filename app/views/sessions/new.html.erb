@@ -1,24 +1,52 @@
 <div class="user-container" id="user-login">
 
-  <h2>Login</h2>
-
   <%= form_with scope: :session, url: login_path, local: true do |form| %>
 
-    <h3><%= @errors if @errors %></h3>
-    <br>
-    <p>
-      <%= form.label "Email: " %><br>
-      <%= form.email_field :email %>
-    </p>
 
-    <p>
-      <%= form.label "Password: " %><br>
-      <%= form.password_field :password %>
-    </p>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="card wow fadeInRight" data-wow-delay="0.3s">
+      <div class="card-body">
 
-    <p>
-      <%= form.submit "Login" %>
-    </p>
+        <% if @errors %>
+          <br>
+          <h3><%= @errors if @errors %></h3>
+        <% end %>
+
+            <!--Header-->
+            <br>
+            <div class="text-center">
+                <h3 class="white-text"><i class="fa fa-user white-text"></i>Log In</h3>
+                <hr class="hr-light">
+            </div>
+
+            <!--Body-->
+
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix white-text active"></i>
+                <%= form.label :email %><br>
+                <%= form.text_field :email, class: "form-control" %>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-lock prefix white-text active"></i>
+
+                <%= form.label :password %><br>
+                <%= form.password_field :password, class: "form-control" %>
+
+            </div>
+
+            <br>
+              <div>
+                <%= form.submit 'Log In' %>
+              </div>
+            <br>
+
+        </div>
+        </div>
+
+    </div>
+
   <% end %>
 
 </div>

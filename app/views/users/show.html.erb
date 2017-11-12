@@ -37,15 +37,20 @@
     <!-- </div> -->
 
   <!-- SUGGESIONS PER REVIEW -->
+                   
+    <% if current_user %>
+                   
     <!-- <div class="row"> -->
       <div class="profile-display col-sm-3">
       <!-- <div class="col-sm-offset-2"> -->
-      <% if @suggestions %>
-      <p>Based on your reviews, here are some suggestions:</p>
+      <% if @suggestions.empty? %>
+        <p><i>You have not written any reviews.</i></p><br>
+      <% else %>
+        <p>Based on your reviews, here are some suggestions:</p>
 
-          <% @suggestions.each do |suggestion| %>
+        <% @suggestions.each do |suggestion| %>
           <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
-          <% end %>
+        <% end %>
 
       <% end %>
       </div>
@@ -63,6 +68,8 @@
             <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
           <% end %>
         <% end %>
+        
+    <% end %>
 
        <%= render 'shared/links' %>
       <!-- </div> -->
