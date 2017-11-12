@@ -1,0 +1,26 @@
+<div class="user-container" id="registration">
+
+  <%= form_with scope: :user, url: users_path, local: true do |form| %>
+
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <br>
+        <h3>Beer</h3>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <br>
+
+    <%= render 'form' %>
+  <% end %>
+
+
+   <%= render 'shared/searched_beers' %>
+</div>
+
+

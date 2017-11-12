@@ -8,7 +8,7 @@ class CreateReviews < ActiveRecord::Migration[5.1]
       t.string :location
       t.integer :beer_id
       t.integer :user_id
-
+      
       t.timestamps
     end
   end
