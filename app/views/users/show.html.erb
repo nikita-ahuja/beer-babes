@@ -1,22 +1,18 @@
-<div class class="profile-container">
-  <h2>Profile Page</h2>
+<div class="transbox">
+  <h1>Welcome, <%= @current_user.username %></h1>
 
-  <!-- profile pic -->
-Welcome, <%= current_user.username %>
+  <!-- PROFILE PICTURE -->
+
   <!-- quiz results / preferences based on quiz -->
 
-  <!-- form to add beer rating/review/notes -->
-
-
-  <!-- beer suggestions based on personal reviews -->
+  <!-- SUGGESIONS PER REVIEW -->
+  <h2>Based on your reviews, here are some suggestions:</h2>
+  <ul>
+    <% @suggestions.each do |suggestion| %>
+      <li> <%= suggestion.name %> </li>
+    <% end %>
+  </ul>
 
   <!-- beer suggessions based on others who share the same preferences (from quiz) -->
-
-  <!-- testing api -->
-  <% if @beers %>
-    <% @beers.each do |beer| %>
-        <p>API ID: <%= beer.id %>, NAME: <%= beer.name %>, STYLE: <%= beer.style.name %> | DESCRIPTION: <%= beer.description %></p>
-    <% end %>
-  <% end %>
 
 </div>
