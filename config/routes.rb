@@ -8,6 +8,8 @@ Rails.application.routes.draw do
  
   get '/profile' => 'users#show'
 
+  resources :beers
+
   resources :users do
     resources :beers
   end

@@ -52,7 +52,17 @@ h6 {
     padding-right: 30px;
 }
 
+.nav-link {
+    font-family: "Bitter", serif;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
 .navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-weight: lighter;
     font-size:  200% !important;
 }
 
@@ -64,4 +74,37 @@ h6 {
     position: relative;
     bottom: 500px;
 
+}
+
+.beer-serach-bar {
+    padding: 1px 4px;
+    font-size: 14px;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.beer-serach-bar-button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    height: 2.75em;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent; 
+    color: inherit;
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.nav-item .search-bar-form {
+    padding-left: 27em ;
 }

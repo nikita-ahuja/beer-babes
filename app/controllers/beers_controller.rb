@@ -1,7 +1,11 @@
 class BeersController < ApplicationController
 
    def index
-      @beers = User.find(params[:user_id]).beers
+      if params[:user_id]
+        @beers = User.find(params[:user_id]).beers
+      else
+        @searched_beers = Beer.search(params[:search])
+      end
     end 
 
 end
