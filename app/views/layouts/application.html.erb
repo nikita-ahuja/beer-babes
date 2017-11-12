@@ -2,9 +2,8 @@
 <html lang="en" class="full-height">
   <head>
     <title>Beer Babes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -59,6 +58,7 @@
                 <div class="container flex-center">
                     <div class="d-flex align-items-center content-height">
                         <div class="row flex-center pt-5 mt-3">
+                             
                              <%= yield %>
 
                         </div>
@@ -90,6 +90,8 @@
             <!--Grid row-->
 
         </div>
+
+       
 
     </main>
     <!--Main Layout-->

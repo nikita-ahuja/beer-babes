@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "users#new"
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+ 
+  get '/profile' => 'users#show'
 
   resources :users do
     resources :beers
   end
 
-  get '/profile' => 'users#show'
-
-  # get 'home/index'
-  devise_scope :user do
-    root to: "devise/registrations#new"
-  end
 end

@@ -1,41 +1,32 @@
-<div class="transbox">
+<div class="beer-box">
 <h1>My Beers</h1>
 
 <ul>
 <% @beers.each_with_index do |beer, index| %>
-  <h5><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse}  %>  
-  	<% beer.reviews.first.rating.times do %>
-  	<li class='fa fa-beer' aria-hidden='true'></li>
-  	<% end %>
-  	</h5>
-  <div id="beer-info<%= index.to_s %>">
-  		<img id="beer-image" src="<%= beer.image %>">
-  <div id="beer-comment">
-  	<strong>Comment</strong><br>
-  	<%= beer.reviews.first.comments %>
+  <h3><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse} %>  
+    <% beer.reviews.first.rating.times do %>
+    <li class='fa fa-beer' aria-hidden='true'></li>
+    <% end %>
+    </h3>
+  <div id="beer-info<%= index.to_s %>" class='collapse'>
+    <img id="beer-image" src="<%= beer.image %>">
+    <div id="beer-comment">
+      <strong>Comment</strong><br>
+      <%= beer.reviews.first.comments %>
+    </div>
+    <div id="beer-note">
+      <strong>My Notes</strong><br>
+      <%= beer.reviews.first.notes %>
+    </div>
   </div>
-  <div id="beer-note">
-  	<strong>My Notes</strong><br>
-  	<%= beer.reviews.first.notes %>
-  </div>
-</div>
 <% end %>
 </ul>
 
-<br></br>
+<br><br>
+
   <button type="button" class="beer-form-button">+ Add a beer</button>
-  <br></br>
+  <br><br>
 
-  <form class="add-beer-form">
-  <%= form_with scope: :review, local: true do |form| %>
-    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
+  <%= render 'new_form' %>
 
-    <%= form.text_field :name, :placeholder => "Type" %><br><br>
-
-    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
-
-    <%= form.submit 'Save' %>
-  <% end %>
-</form>
 </div>
-

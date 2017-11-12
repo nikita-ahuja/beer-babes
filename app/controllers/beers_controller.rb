@@ -1,9 +1,7 @@
 class BeersController < ApplicationController
-    
-    def index
+
+   def index
       @beers = User.find(params[:user_id]).beers
     end 
 
-
 end
-
