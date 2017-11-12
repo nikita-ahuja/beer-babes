@@ -5,3 +5,33 @@ a > div {
 a:hover > div {
   display: block;
 }
+
+/*.transbox {
+  background-color: white;
+  opacity: 0.6;
+  filter: alpha(opacity=60);  for IE* and earlier
+  border-radius: 10px;
+  padding: 5% 5% 10% 5%;
+  width: 70%;
+  margin: auto;
+}*/
+
+div.error_messages > ul > li {
+  list-style-type: none;
+}
+
+
+.profile-display {
+    /*padding-top: 50px;*/
+    margin: auto;
+    position: relative;
+    background-color: white;
+    opacity: 0.7;
+    /*max-width: 30%;*/
+    /*padding: 30px;*/
+
+}
+
+.transbox {
+    margin: auto;
+}

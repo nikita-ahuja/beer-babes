@@ -16,44 +16,41 @@
 
   <body>
 
-<!--     <%# if notice %>
-      <p class="alert alert-success"><#%= notice %></p>
-    <%# end %>
-    <%# if alert %>
-      <p class="alert alert-danger"><#%= alert %></p>
-    <%# end %>
- -->
-
         <!--Main Navigation-->
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <div class="container">
                 <a class="navbar-brand" href="/"><strong>Beer Babes</strong></a>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+<!--                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
+                        </li> -->
 
-                            <a class="nav-link" href="#">My Beers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/profile">Profile</a>
-                        </li>
+                        <% if current_user %>
+                            <li class="nav-item">
+                                <%= link_to "My Beers", [current_user, :beers], :class => "navbar-link" %>
+                            </li>
+                            <li class="nav-item">
+                                <%= link_to "Profile", current_user, :class => "navbar-link" %>
+                            </li>
+                            <li class="nav-item">
+                                <%= link_to "Logout", logout_path, method: :delete, :class => "navbar-link" %>
+                            </li>
+                        <% else %>
+                            <li class="nav-item">
+                                <%= link_to "Beers", beers_path, :class => "navbar-link" %>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Log In</a>
+                            </li>
+                        <% end %>
+
                         <li class="nav-item">
                             <%= render 'shared/search_bar' %>
                         </li>
                     </ul>
-
-                    
-                    <!-- <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    </form> -->
                 </div>
             </div>
         </nav>
@@ -64,7 +61,7 @@
                 <div class="container flex-center">
                     <div class="d-flex align-items-center content-height">
                         <div class="row flex-center pt-5 mt-3">
-                             
+
                              <%= yield %>
 
                         </div>
@@ -75,32 +72,6 @@
 
     </header>
     <!--Main Navigation-->
-
-    <!--Main Layout-->
-    <main>
-
-        <div class="container">
-
-            <!--Grid row-->
-            <div class="row py-5">
-
-                <!--Grid column-->
-                <div class="col-md-12 text-center">
-
-<!--                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
-
-                </div>
-                <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
-        </div>
-
-       
-
-    </main>
-    <!--Main Layout-->
 
     <script type= "text/javascript">
       new WOW().init();
