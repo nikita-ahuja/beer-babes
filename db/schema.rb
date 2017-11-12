@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20171112012926) do
     t.string "city"
     t.string "brewery"
     t.string "image"
-    t.boolean "independent"
+    t.string "independent"
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

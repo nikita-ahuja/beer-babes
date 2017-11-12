@@ -6,9 +6,9 @@ class CreateBeers < ActiveRecord::Migration[5.1]
       t.string :city
       t.string :brewery
       t.string :image
-      t.boolean :independent
+      t.string :independent
       t.string :category
-     
+
      	t.timestamps
     end
   end
