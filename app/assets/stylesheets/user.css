@@ -33,5 +33,23 @@ div.error_messages > ul > li {
 }
 
 .transbox {
-    margin: auto;
+  margin: auto;
+}
+
+.left{
+  position: relative;
+  left: 50px;
+}
+
+.middle {
+  position: relative;
+  left: 150px;
+}
+.right {
+  position: relative;
+  left: 200px;
+}
+
+.profile-info {
+  padding-top: 50px;
 }
