@@ -2,31 +2,34 @@
   <h1>Welcome, <%= @current_user.username %></h1>
 
   <!-- PROFILE PICTURE -->
-  
+
   <!-- quiz results / preferences based on quiz -->
 
   <!-- SUGGESIONS PER REVIEW -->
-  <% if @suggestions %>
-  <p>Based on your reviews, here are some suggestions:</p>
+  <% if current_user %>
 
+    <% if @suggestions.empty? %>
+        <p><i>You have not written any reviews.</i></p><br>
+    <% else %>
+      <p>Based on your reviews, here are some suggestions:</p>
       <% @suggestions.each do |suggestion| %>
       <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
-      <% end %>
-
-  <br>
-  <% end %>
-
-  <!-- BABE SUGGESTIONS -->
-  <% if @babe_suggestions %>
-    <p>Here are some suggestions based on other users who share the same preferences as you:</p>
-
-    <% @babe_suggestions.each do |babe_suggestion| %>
-      <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
+      <% end %><br>
     <% end %>
+
+    <!-- BABE SUGGESTIONS -->
+    <% if @babe_suggestions %>
+      <p>Here are some suggestions based on other users who share the same preferences as you:</p>
+
+      <% @babe_suggestions.each do |babe_suggestion| %>
+        <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
+      <% end %>
+    <% end %>
+
   <% end %>
 
  <%= render 'shared/links' %>
 
 </div>
 
- 
+
