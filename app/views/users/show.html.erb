@@ -6,7 +6,7 @@
   <!-- quiz results / preferences based on quiz -->
 
   <!-- SUGGESIONS PER REVIEW -->
-  <h2>Based on your reviews, here are some suggestions:</h2>
+  <p>Based on your reviews, here are some suggestions:</p>
 
       <% @suggestions.each do |suggestion| %>
       <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
