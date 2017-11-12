@@ -7,11 +7,11 @@
 
   <!-- SUGGESIONS PER REVIEW -->
   <h2>Based on your reviews, here are some suggestions:</h2>
-  <ul>
-    <% @suggestions.each do |suggestion| %>
-      <li> <%= suggestion.name %> </li>
-    <% end %>
-  </ul>
+
+      <% @suggestions.each do |suggestion| %>
+      <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
+      <% end %>
+
 
   <!-- beer suggessions based on others who share the same preferences (from quiz) -->
 
