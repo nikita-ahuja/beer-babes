@@ -59,6 +59,7 @@ gem 'pry'
 gem 'brewery_db'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
@@ -66,7 +67,7 @@ gem "animate-rails"
 gem "font-awesome-rails"
 
 #gem text-edit form
-gem 'simple_form', '~> 3.2'
+
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ckeditor', '~> 4.1'

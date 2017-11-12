@@ -1,12 +1,49 @@
 <form class="add-beer-form">
-  <%= form_with scope: :review, local: true do |form| %>
-    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
+  <%= simple_form_for @beer, local: true do |form| %>
 
-    <%= form.text_field :name, :placeholder => "Type" %><br><br>
+    <% if @beer.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@beer.errors.count, "error") %>
+            prohibited this article from being saved:
+        </h2>
+        <ul>
+          <% @beer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
 
-    <%= form.text_area :name, :placeholder => "Notes" %><br><br>
+    <p>
+      <%= form.input :name %>
+    </p>
+
+
+    <p>
+      <%= form.input :independent, collection: ["Independent", "No Independent"] %>
+    </p>
+
+    <p>
+      <%= form.input Review.first.comments, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}} %>
+    </p>
+
+    <p>
+      <%= form.input :notes %>
+    </p>
+
+    <p>
+      <%= form.input :location %>
+    </p>
+
+    <p>
+      <%= form.input :date %>
+    </p>
+
+    <p>
+      <%= form.input :rating, as: :radio_buttons, collection: [ 1,2,3,4,5 ], :item_wrapper_class => 'inline' %>
+    </p>
 
     <%= form.submit 'Save' %>
   <% end %>
