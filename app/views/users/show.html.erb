@@ -8,16 +8,12 @@
     <!-- <div class="row"> -->
       <div class="profile-display col-sm-3 left">
       <!-- <div class="col-sm-offset-3"> -->
-      Here are your personal preferences:
-      <br></br>
-      Light beer ranking: <%= @current_user.light_rating %>
-      <br></br>
-      Dark beer ranking: <%= @current_user.dark_rating %>
-      <br></br>
-      Hoppy beer ranking: <%= @current_user.hoppy_rating %>
-      <br></br>
+     <h3> Personal preferences: </h3>
+     <p><i>Light beer ranking: <%= @current_user.light_rating %></i></p>
+      <p><i>Dark beer ranking: <%= @current_user.dark_rating %></i></p>
+      <p><i>Hoppy beer ranking: <%= @current_user.hoppy_rating %></i></p>
 
-    Based on these results, you are...
+    <p>Based on these results, you are...</p>
 
     <% case @current_user.hoppy_rating %>
     <% when 4 || 5  %>
@@ -63,7 +59,7 @@
       <div class="profile-display col-sm-3 right">
       <!-- <div class="col-sm-offset-3"> -->
         <% if @babe_suggestions %>
-          <p>Here are some suggestions based on other users who share the same preferences as you:</p>
+          <h4><p>Beer suggestions based on users who share the same preferences as you:</p></h4>
 
           <% @babe_suggestions.each do |babe_suggestion| %>
             <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
@@ -72,12 +68,14 @@
 
     <% end %>
 
-       <%= render 'shared/links' %>
+       <!--  <#%= render 'shared/links' %> -->
       <!-- </div> -->
     </div>
     <!-- </div> -->
   <!-- </div> -->
 </div> <!-- close profile info -->
 </div>
+
+<%= render 'shared/links' %>
 
 

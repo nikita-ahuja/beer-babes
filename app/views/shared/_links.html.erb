@@ -1,4 +1,5 @@
-<% if logged_in? %>
+<div class= "shared-links">
+  <% if logged_in? %>
   <p class="navbar-text pull-right">
     Logged in as <strong><%= current_user.email %></strong>.
     <%= link_to 'Edit profile', edit_user_path(current_user), :class => 'navbar-link' %> |
@@ -8,3 +9,4 @@
     <%= link_to "Login", login_path, :class => 'navbar-link'  %>
   </p>
  <% end %>
+</div>

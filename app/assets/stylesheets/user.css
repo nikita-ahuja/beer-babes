@@ -53,3 +53,10 @@ div.error_messages > ul > li {
 .profile-info {
   padding-top: 50px;
 }
+
+.shared-links{
+  position:absolute;
+  top:0;
+  right:0;
+  max-width: 20%;
+}
