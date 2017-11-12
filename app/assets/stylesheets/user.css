@@ -5,3 +5,13 @@ a > div {
 a:hover > div {
   display: block;
 }
+
+.transbox {
+  background-color: white;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* for IE* and earlier */
+  border-radius: 10px;
+  padding: 5% 10% 10% 15%;
+  width: 70%;
+  margin: auto;
+}
