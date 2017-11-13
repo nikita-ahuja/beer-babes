@@ -11,7 +11,7 @@ $(".beer-form-button").on("click", function(e){
 
 $(".more-information").bind("mouseover", function(e){
   e.preventDefault();
-  $(this).css("color", "#428bca")
+  $(this).css("color", "#742727")
 
 });
 
@@ -27,5 +27,12 @@ $(".more-information").on("click", function(e){
   $(this).hide();
 
 });
+
+// $(".more-information").on("click", function(e){
+//   e.preventDefault();
+//   $(".modal-body").replaceWith("#quiz-here");
+//   $(this).hide();
+
+// });
 
 });
