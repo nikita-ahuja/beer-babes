@@ -27,6 +27,7 @@ div.error_messages > ul > li {
     position: relative;
     background-color: white;
     opacity: 0.7;
+    border-radius: 10px;
     /*max-width: 30%;*/
     /*padding: 30px;*/
 
@@ -59,4 +60,5 @@ div.error_messages > ul > li {
   top:0;
   right:0;
   max-width: 20%;
+  font-family: "Zilla Slab";
 }
