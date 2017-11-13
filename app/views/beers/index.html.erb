@@ -26,10 +26,8 @@
 
 <br><br>
 
-  <button type="button" class="beer-form-button">+ Add a beer</button>
-  <br><br>
-
-  <%= render 'new_form' %>
+<br><br>
+  <%= render partial: 'new_form', locals: {beer: @beer} %>
 <% end %>
 
 
