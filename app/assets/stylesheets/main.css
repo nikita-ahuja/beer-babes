@@ -27,7 +27,7 @@ body {
     background-color: rgba(229, 228, 255, 0.2);
     font-family: "Zilla Slab";
     font-size: 1.5em;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
  .md-form .prefix {
@@ -97,7 +97,6 @@ h6 {
 .navbar-brand:hover {
     color: #742727;
 }
-
 
 #quiz-here{
     /*background-color: red;*/

@@ -24,9 +24,22 @@ $(".more-information").bind("mouseleave", function(e){
 $(".more-information").on("click", function(e){
   e.preventDefault();
   $(".modal-body").show("#quiz-here");
+  // $("#quiz-here").scrollIntoView();
+  scrollTop: scrolled
   $(this).hide();
 
 });
+
+
+$(".more-information").on("click" ,function(){
+  scrolled=scrolled+300;
+  $(".modal-body").animate({
+  scrollTop:  scrolled
+});
+
+
+});
+
 
 // $(".more-information").on("click", function(e){
 //   e.preventDefault();
