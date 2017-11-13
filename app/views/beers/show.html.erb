@@ -1,0 +1,10 @@
+<div class='beer-box'>
+  <h1><%= @beer.name %></h1>
+  <p><b>Style</b> <%= @beer.style %> | <b>Category</b> <%= @beer.category %></p>
+  <p><b>Brewery</b> <%= @beer.brewery %> | <b>City</b> <%= @beer.city %> |
+  <% if @beer.independent %>
+    <b>Independent</b> Yes</p>
+  <% else %>
+    <b>Independent</b> No</p>
+  <% end %>
+</div>
