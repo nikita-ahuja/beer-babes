@@ -28,7 +28,7 @@ h1{
     z-index:999
 }
 
-.beer-glass{background-image:url('beer-glass.png');}
+.beer-glass{background-image:asset-url('beer-glass.png');}
 
 .beer-preference input:active +.beer-glass, .beer-preference input:active +.beer-glass{opacity: .9;}
 
