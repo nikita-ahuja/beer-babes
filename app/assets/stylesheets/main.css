@@ -151,7 +151,12 @@ h6 {
 
 
 .slogan {
+   /* position: relative;
+    right: 0px;
+    top: 0px;*/
     font-family: "Zilla Slab";
+    /*font-size: 2em;*/
     font-size: 10em;
+    /*max-width: 15%*/
 
 }

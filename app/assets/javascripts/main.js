@@ -35,4 +35,12 @@ $(".more-information").on("click", function(e){
 
 // });
 
+// $(".start-drinking").on("click", function(e){
+//   e.preventDefault();
+//   $(this).hide();
+//   $(".slogan").hide();
+//   $(".md-form").show();
+
+// });
+
 });
