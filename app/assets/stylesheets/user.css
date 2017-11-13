@@ -37,7 +37,7 @@ div.error_messages > ul > li {
   margin: auto;
 }
 
-.left{
+/*.left{
   position: relative;
   left: 50px;
 }
@@ -49,10 +49,12 @@ div.error_messages > ul > li {
 .right {
   position: relative;
   left: 200px;
-}
+}*/
 
 .profile-info {
   padding-top: 50px;
+  margin: auto;
+  text-align: center;
 }
 
 .shared-links{
@@ -71,7 +73,8 @@ div.error_messages > ul > li {
   color: black;
 }
 
-.prefs, .welcome {
+.prefs, .welcome, .reviews, .suggestions {
   font-family: "Zilla Slab";
 }
+
 
