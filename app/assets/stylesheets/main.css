@@ -1,7 +1,7 @@
 /*.intro-2 */
 
 body {
-    background: url("beerbg.jpg")no-repeat center center;
+    background: url("beerglassleft.jpg")no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
@@ -25,6 +25,9 @@ body {
 }
 .card {
     background-color: rgba(229, 228, 255, 0.2);
+    font-family: "Zilla Slab";
+    font-size: 1.5em;
+    border-radius: 15px;
 }
 
  .md-form .prefix {
@@ -32,8 +35,15 @@ body {
     margin-top: 1rem;
 }
 .md-form label {
-    color: #ffffff;
+    /*color: #ffffff;*/
+    font-size: 0.8em;
 }
+
+.md-form {
+    width: 50%;
+    margin: auto;
+}
+
 h6 {
     line-height: 1.7;
 }
@@ -53,19 +63,40 @@ h6 {
 }
 
 .nav-link {
-    font-family: "Bitter", serif;
+    /*font-family: inherit;*/
     font-weight: bold;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     font-size: 0.7em;
 }
 
-.navbar-brand {
-    font-family: "Pacifico", cursive;
-    font-weight: lighter;
-    font-size:  200% !important;
+.navbar-link {
+    color: #742727;
+    /*font-family: Copse;*/
+    font-family: "Pacifico";
+    /*font-family: "Helvetica Neue";*/
+    /*font-weight: bold;*/
+    font-size: 1.25em;
+    color: black;
+    /*background-color: black;*/
 }
 
+.navbar-link:hover {
+    color: #742727;
+}
+
+.navbar-brand {
+    font-family: "Pacifico", cursive;
+    /*font-family: Copse;*/
+    font-weight: lighter;
+    font-size:  200% !important;
+    /*color: #742727;*/
+    color: black;
+}
+
+.navbar-brand:hover {
+    color: #742727;
+}
 
 #quiz-here{
     /*background-color: red;*/
@@ -82,7 +113,7 @@ h6 {
     color: #555555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
 }
 
@@ -97,14 +128,21 @@ h6 {
     text-decoration: none;
     white-space: nowrap;
     background-color: transparent;
-    color: inherit;
-    font-family: "Bitter", serif;
+    border: 1px solid black;
+    /*color: inherit;*/
+    /*font-family: "Bitter", serif;*/
+    font-family: "Zilla Slab";
     font-weight: 400;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    /*text-transform: uppercase;*/
+    font-size: 0.8em;
+
 }
 
-.nav-item .search-bar-form {
-    padding-left: 27em ;
+.beer-serach-bar-button:hover {
+    background-color: #e8e8e8;
 }
+
+/*.nav-item .search-bar-form {
+    padding-left: 27em ;
+}*/
