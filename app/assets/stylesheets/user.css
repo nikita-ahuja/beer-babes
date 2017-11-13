@@ -25,11 +25,12 @@ div.error_messages > ul > li {
     /*padding-top: 50px;*/
     margin: auto;
     position: relative;
-    background-color: rgba(229, 228, 255, 0.4);
+    background-color: rgba(229, 228, 255, 0.5);
     /*max-width: 30%;*/
     /*padding: 30px;*/
+    border: 1px solid #742727;
     border-radius: 15px;
-
+    padding-bottom: 10px;
 }
 
 .transbox {
@@ -76,4 +77,9 @@ div.error_messages > ul > li {
   font-family: "Zilla Slab";
 }
 
+
+.reviews {
+  margin-top: 15px;
+  padding-top: 5px;
+}
 
