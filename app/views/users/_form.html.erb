@@ -43,15 +43,16 @@
         <p></p>
         <p class="more-information">
           <!--   <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i> -->
-          <i class="fa fa-angle-double-right fa-3x" aria-hidden="true"></i>
+          <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
         </p>
     </div>
     </div>
 </div>
 
 <div class="col-md-offset-6">
-        <div class="modal-body" style="display:none;">
-        <h1>On a scale of 1-5, how much do you enjoy light beer?</h1>
+        <div class="modal-body" id="beer-formy" style="display:none;">
+        <h1>On a scale of 1-5...</h1>
+        <h2>How much do you enjoy light beer?</h2>
         <div class="light-beer-ques beer-preference">
             <input type="radio" id="light-rating-1" class="light-rating-input" name="user[light_rating]" value="1"/>
             <label class="beer-glass" for="light-rating-1"></label>
@@ -73,7 +74,7 @@
             <span>12345</span>
         </div>
 
-        <h1>On a scale of 1-5, how much do you enojoy dark beer?</h1>
+        <h2>How much do you enjoy dark beer?</h2>
         <div class="dark-beer-ques beer-preference">
             <input type="radio" id="dark-rating-1" class="dark-rating-input" name="user[dark_rating]" value="1" />
             <label class="beer-glass" for="dark-rating-1"></label>
@@ -95,7 +96,7 @@
             <span>12345</span>
         </div>
 
-        <h1>On a scale of 1-5, how much do you enjoy hoppy beer?</h1>
+        <h2>How much do you enjoy hoppy beer?</h2>
         <div class="hoppy-beer-ques beer-preference">
             <input type="radio" id="hoppy-rating-1" class="hoppy-rating-input" name="user[hoppy_rating]" value="1"/>
             <label class="beer-glass" for="hoppy-rating-1"></label>
@@ -117,8 +118,10 @@
             <span>12345</span>
         </div>
 
+        <p></p>
+
         <div class="text-center">
-            <button class="btn btn-indigo">Sign up</button>
+            <button class="drink-btn">Start Drinking</button>
              <hr class="hr-light mb-3 mt-4">
 
                 <div class="inline-ul text-center d-flex justify-content-center">

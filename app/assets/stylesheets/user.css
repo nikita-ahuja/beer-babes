@@ -25,33 +25,28 @@ div.error_messages > ul > li {
     /*padding-top: 50px;*/
     margin: auto;
     position: relative;
-    background-color: white;
-    opacity: 0.7;
+   /* background-color: white;
+    opacity: 0.6;*/
+   /* background-color: rgba(229, 228, 255, 0.5);*/
+   /*background-color: #742727;*/
+    background-color: rgba(116, 39, 39, 0.2);
+   /*opacity: 0.2;*/
     /*max-width: 30%;*/
     /*padding: 30px;*/
-
+    border: 3px solid #742727;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    color: black;
 }
 
 .transbox {
   margin: auto;
 }
 
-.left{
-  position: relative;
-  left: 50px;
-}
-
-.middle {
-  position: relative;
-  left: 150px;
-}
-.right {
-  position: relative;
-  left: 200px;
-}
-
 .profile-info {
   padding-top: 50px;
+  margin: auto;
+  text-align: center;
 }
 
 .shared-links{
@@ -60,3 +55,34 @@ div.error_messages > ul > li {
   right:0;
   max-width: 20%;
 }
+
+
+.results {
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-size: 20px;
+  /*font-size:  200% !important;*/
+  color: black;
+}
+
+.prefs, .welcome, .reviews, .suggestions {
+  font-family: "Zilla Slab";
+  /*color: black;*/
+}
+
+
+.reviews {
+  margin-top: 15px;
+  padding-top: 5px;
+}
+
+.sug-links {
+  color: black;
+  text-decoration: underline;
+  font-family: "Zilla Slab";
+}
+
+.sug-links:hover {
+  color: #742727;
+}
+

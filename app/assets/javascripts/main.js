@@ -1,4 +1,3 @@
-// new WOW().init();
 $(document).ready(function() {
 
 
@@ -23,29 +22,17 @@ $(".more-information").bind("mouseleave", function(e){
 
 $(".more-information").on("click", function(e){
   e.preventDefault();
-  $(".modal-body").show("#quiz-here");
-  // $("#quiz-here").scrollIntoView();
-  scrollTop: scrolled
+  $(".modal-body").fadeIn("#quiz-here");
   $(this).hide();
 
 });
 
 
 $(".more-information").on("click" ,function(){
-  scrolled=scrolled+300;
-  $(".modal-body").animate({
-  scrollTop:  scrolled
+  $('html, body').animate({
+        scrollTop: $("#beer-formy").offset().top
+    }, 1000);
 });
 
-
-});
-
-
-// $(".more-information").on("click", function(e){
-//   e.preventDefault();
-//   $(".modal-body").replaceWith("#quiz-here");
-//   $(this).hide();
-
-// });
 
 });
