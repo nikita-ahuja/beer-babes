@@ -1,5 +1,5 @@
 <div class="transbox">
-  <h1>Welcome, <%= @current_user.username %></h1>
+  <h1 class="welcome">Drink up, <%= @current_user.username %>.</h1>
 
   <!-- PROFILE PICTURE -->
 
@@ -8,13 +8,16 @@
     <!-- <div class="row"> -->
       <div class="profile-display col-sm-3 left">
       <!-- <div class="col-sm-offset-3"> -->
-     <h3> Personal preferences: </h3>
-     <p><i>Light beer ranking: <%= @current_user.light_rating %></i></p>
-      <p><i>Dark beer ranking: <%= @current_user.dark_rating %></i></p>
-      <p><i>Hoppy beer ranking: <%= @current_user.hoppy_rating %></i></p>
+     <div class="prefs">
+       <h3> Personal preferences: </h3>
+       <p><i>Light beer ranking: <%= @current_user.light_rating %></i></p>
+        <p><i>Dark beer ranking: <%= @current_user.dark_rating %></i></p>
+        <p><i>Hoppy beer ranking: <%= @current_user.hoppy_rating %></i></p>
 
-    <p>Based on these results, you are...</p>
+      <p>Based on these results, you are...</p>
+    </div>
 
+<p class="results">
     <% case @current_user.hoppy_rating %>
     <% when 4 || 5  %>
       <%= " a HOP - tometrist!" %>
@@ -28,7 +31,7 @@
     <% case @current_user.light_rating %>
     <% when 4 || 5  %>
       <%= "a beach blonde babe!" %>
-    <% end %>
+    <% end %> </p>
       <!-- </div> -->
       </div> <!-- close profile display and col sm -->
     <!-- </div> -->
