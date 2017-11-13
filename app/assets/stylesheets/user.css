@@ -67,6 +67,7 @@ div.error_messages > ul > li {
 
 .prefs, .welcome, .reviews, .suggestions {
   font-family: "Zilla Slab";
+  /*color: black;*/
 }
 
 
@@ -75,8 +76,13 @@ div.error_messages > ul > li {
   padding-top: 5px;
 }
 
-a {
-  font-color: black;
+.sug-links {
+  color: black;
+  text-decoration: underline;
+  font-family: "Zilla Slab";
 }
 
+.sug-links:hover {
+  color: #742727;
+}
 

@@ -51,9 +51,14 @@
         <% else %>
         <p>Based on your reviews, here are some suggestions:</p>
 
-        <% @suggestions.each do |suggestion| %>
-        <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a><br>
-        <% end %>
+
+
+       <% @suggestions.each do |suggestion| %>
+        <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a>
+
+
+        <br>
+        <%end %>
 
         <% end %>
       </div>
@@ -70,7 +75,7 @@
       <h4><p class="suggestions">Beer suggestions based on users who share the same preferences as you:</p></h4>
 
       <% @babe_suggestions.each do |babe_suggestion| %>
-      <a href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
+      <a class="sug-links" href=<%=babe_suggestion.image %>><%= babe_suggestion.name %><div><img src=<%= babe_suggestion.image %>></div></a><br>
       <% end %>
       <% end %>
 
