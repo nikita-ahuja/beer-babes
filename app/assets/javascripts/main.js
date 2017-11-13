@@ -1,4 +1,3 @@
-// new WOW().init();
 $(document).ready(function() {
 
 
@@ -24,8 +23,6 @@ $(".more-information").bind("mouseleave", function(e){
 $(".more-information").on("click", function(e){
   e.preventDefault();
   $(".modal-body").fadeIn("#quiz-here");
-  // $("#quiz-here").scrollIntoView();
-  // scrollTop: scrolled
   $(this).hide();
 
 });
@@ -37,25 +34,5 @@ $(".more-information").on("click" ,function(){
     }, 1000);
 });
 
-
-
-// $(".more-information").on("click", function(e){
-//   e.preventDefault();
-//   $(".modal-body").replaceWith("#quiz-here");
-//   $(this).hide();
-
-// });
-
-function scrollDown() {
-  var element = document.getElementById("beer-formy");
-  element.scrollIntoView();
-}
-
-
-
-// function myFunction() {
-//     var elmnt = document.getElementById("content");
-//     elmnt.scrollIntoView();
-// }
 
 });
