@@ -7,4 +7,15 @@
   <% else %>
     <b>Independent</b> No</p>
   <% end %>
+
+
+  <!-- GOOGLE MAPS TESTING -->
+
+  <iframe id="map-show"
+       width="100%"
+       height="100%"
+       frameborder="0" style="border:0;"
+       src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_MAPS_API_KEY']%>&q=<%= @beer.brewery %>"allowfullscreen>
+     </iframe>
+
 </div>

@@ -85,13 +85,18 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
+    geocoder (1.4.4)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     google_maps_service (0.4.2)
       hurley (~> 0.1)
       multi_json (~> 1.11)
       retriable (~> 2.0)
+    google_places (1.0.0)
+      httparty (>= 0.13.1)
     hashie (2.1.2)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     hurley (0.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
@@ -116,14 +121,17 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multi_xml (0.6.0)
     multipart-post (1.2.0)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
-    pry (0.11.1)
+    pry (0.11.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     public_suffix (3.0.1)
     puma (3.10.0)
     rack (2.0.3)
@@ -220,12 +228,14 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   faker
   font-awesome-rails
+  geocoder
   google_maps_service
+  google_places
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.1)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
-  pry
+  pry-rails
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
