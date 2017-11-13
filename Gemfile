@@ -64,3 +64,5 @@ gem 'autoprefixer-rails'
 
 gem "animate-rails"
 gem "font-awesome-rails"
+
+gem 'google_maps_service'
