@@ -1,11 +1,15 @@
 <div class="beer-box">
 <h1>My Beers</h1>
 
+<% if @searched_beers %>
+  <%= render 'shared/searched_beers' %>
+<% else %>
+
 <% if logged_in? %>
 
 <ul>
 <% @beers.each_with_index do |beer, index| %>
-  <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse} %>  
+  <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse} %>
     <% beer.reviews.first.rating.times do %>
     <li class='fa fa-beer' aria-hidden='true'></li>
     <% end %>
@@ -32,8 +36,6 @@
   <%= render 'new_form' %>
 <% end %>
 
-
-  <%= render 'shared/searched_beers' %>
+<% end %>
 </div>
 
- 
