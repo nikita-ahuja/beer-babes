@@ -1,41 +1,16 @@
-/*.intro-2 */
-
 body {
     background: asset-url("beerglassleft.jpg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
-
 }
-.top-nav-collapse {
-    background-color: #3f51b5 !important;
-}
-.navbar:not(.top-nav-collapse) {
-    background: transparent !important;
-}
-@media (max-width: 900px) {
-    .navbar:not(.top-nav-collapse) {
-        /*background: #3f51b5 !important;*/
-        margin: auto !important;
-        text-align: center !important;
-    }
-}
-
-/*
-@media (max-width: 900px) {
-    header {
-        margin: auto !important;
-        text-align: center !important;
-        background-color: red;
-    }
-}*/
-
 
 .hm-gradient .full-bg-img {
     background: -webkit-linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 100%);
     background: -webkit-gradient(linear, 45deg, from(rgba(29, 236, 197, 0.4)), to(rgba(96, 0, 136, 0.4)));
     background: linear-gradient(to 45deg, rgba(29, 236, 197, 0.4), rgba(96, 0, 136, 0.4) 100%);
 }
+
 .card {
     background-color: rgba(229, 228, 255, 0.2);
     font-family: "Zilla Slab";
@@ -47,6 +22,7 @@ body {
     font-size: 1.5rem;
     margin-top: 1rem;
 }
+
 .md-form label {
     /*color: #ffffff;*/
     font-size: 0.8em;
@@ -55,35 +31,12 @@ body {
 .md-form {
     width: 50%;
     margin: auto;
+    padding-bottom: 10px;
 }
 
 h6 {
     line-height: 1.7;
 }
-@media (max-width: 740px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 1040px;
-    }
-}
-
-.nav-item {
-    list-style-type: none;
-    padding-top: 15px;
-    padding-right: 30px;
-}
-
-/*.nav-link {
-    font-family: inherit;
-    font-weight: bold;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    font-family: "Zilla Slab";
-    color: black;
-}*/
 
 .navbar-link, .nav-link {
     color: #742727;
@@ -92,7 +45,7 @@ h6 {
     /*font-family: "Helvetica Neue";*/
     /*font-weight: bold;*/
     font-size: 1.25em;
-    color: black;
+    color: black !important;
     /*background-color: black;*/
 }
 
@@ -106,7 +59,7 @@ h6 {
     font-weight: lighter;
     font-size:  200% !important;
     /*color: #742727;*/
-    color: black;
+    color: black !important;
 }
 
 .navbar-brand:hover {
@@ -122,9 +75,10 @@ h6 {
 
 }
 
-.beer-serach-bar {
+.beer-search-bar {
     padding: 1px 4px;
     font-size: 14px;
+    font-family: "Zilla Slab";
     color: #555555;
     background-color: #fff;
     background-image: none;
@@ -132,29 +86,26 @@ h6 {
     border-radius: 4px;
 }
 
-.beer-serach-bar-button, .drink-btn {
+.beer-search-bar-button, .drink-btn {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
-    height: 2.75em;
+    height: 2.5em;
     padding: 0 1em;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     background-color: transparent;
     border: 1px solid black;
-    /*color: inherit;*/
-    /*font-family: "Bitter", serif;*/
     font-family: "Zilla Slab";
     font-weight: 400;
     letter-spacing: 0.2em;
-    /*text-transform: uppercase;*/
     font-size: 0.8em;
 
 }
 
-.beer-serach-bar-button:hover {
+.beer-search-bar-button:hover {
     background-color: #e8e8e8;
 }
 
@@ -162,9 +113,14 @@ h6 {
     background-color: #e8e8e8;
 }
 
-.navbar-brand {
-    position: relative;
-    margin: auto;
+.navbar, .navbar-default{
+    background-color: rgba(102, 38, 8, 0)  !important;
+    border-color: rgba(102, 38, 8, 0) !important;
 }
+
+.icon-bar {
+    color: black !important;
+}
+
 
 
