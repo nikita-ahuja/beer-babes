@@ -3,7 +3,7 @@ class Beer < ApplicationRecord
   has_many :users, through: :reviews
 
   validates :name, presence: true
-
+  accepts_nested_attributes_for :reviews
 
 
   def self.search(search)

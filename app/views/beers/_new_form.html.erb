@@ -1,13 +1,43 @@
-<form class="add-beer-form">
-  <%= form_with scope: :review, local: true do |form| %>
-    <%= form.text_field :name, :placeholder => "Beer Name" %><br><br>
-
-    <%= form.text_field :name, :placeholder => "Type" %><br><br>
-
-    <%= form.text_area :name, :placeholder => "Comments" %><br><br>
-
-    <%= form.text_area :name, :placeholder => "Notes" %><br><br>
-
+<button type="button" class="beer-form-button">+ Add a beer</button>
+<div class="add-beer-form">
+  <%= simple_form_for [current_user, beer] do |form| %>
+    <% if beer.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(beer.errors.count, "error") %>
+            prohibited this article from being saved:
+        </h2>
+        <ul>
+          <% beer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p>
+      <%= form.input :name %>
+    </p>
+    <p>
+      <%= form.input :independent, collection: ["Independent", "No Independent"] %>
+    </p>
+    <%= form.simple_fields_for :reviews do |review| %>
+    <p>
+      <%= review.input :comments, as: :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}} %>
+    </p>
+    <p>
+      <%= review.input :notes %>
+    </p>
+    <p>
+      <%= review.input :location %>
+    </p>
+    <p>
+      <%= review.input :date, as: :date, html5: true %>
+    </p>
+    <p>
+      <%= review.input :rating, as: :radio_buttons, collection: [ 1,2,3,4,5 ], item_label_class: "radio-inline",  :item_wrapper_tag => false %>
+    </p>
+    <%= review.hidden_field :user_id, :value => current_user.id %>
+   <% end %>
     <%= form.submit 'Save' %>
   <% end %>
-</form>
+</div>
