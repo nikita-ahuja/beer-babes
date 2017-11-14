@@ -86,7 +86,7 @@ h6 {
     border-radius: 4px;
 }
 
-.beer-search-bar-button, .drink-btn {
+.beer-search-bar-button, .drink-btn, .login-button {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     border-radius: 4px;
     cursor: pointer;
@@ -100,7 +100,6 @@ h6 {
     border: 1px solid black;
     font-family: "Zilla Slab";
     font-weight: 400;
-    letter-spacing: 0.2em;
     font-size: 0.8em;
 
 }
@@ -113,6 +112,10 @@ h6 {
     background-color: #e8e8e8;
 }
 
+.login-button:hover {
+    background-color: #e8e8e8;
+}
+
 .navbar, .navbar-default{
     background-color: rgba(102, 38, 8, 0)  !important;
     border-color: rgba(102, 38, 8, 0) !important;
@@ -120,6 +123,19 @@ h6 {
 
 .icon-bar {
     color: black !important;
+}
+
+a > .regis-link {
+    color: black;
+    text-decoration: underline;
+}
+
+a > .regis-link:hover {
+    color: #742727;
+}
+
+.loggy {
+    color:black;
 }
 
 
