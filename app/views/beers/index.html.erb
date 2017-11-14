@@ -1,41 +1,41 @@
 <div class="beer-box">
-<h1>My Beers</h1>
+  <h1>My Beers</h1>
 
-<% if @searched_beers %>
-  <%= render 'shared/searched_beers' %>
-<% else %>
+  <% if @searched_beers %>
+    <%= render 'shared/searched_beers' %>
+  <% else %>
 
-<% if logged_in? %>
+    <% if logged_in? %>
 
-<ul>
-<% @beers.each_with_index do |beer, index| %>
-  <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse} %>
-    <% beer.reviews.first.rating.times do %>
-    <li class='fa fa-beer' aria-hidden='true'></li>
+    <ul>
+    <% @beers.each_with_index do |beer, index| %>
+      <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse} %>
+        <% beer.reviews.first.rating.times do %>
+        <li class='fa fa-beer' aria-hidden='true'></li>
+        <% end %>
+        </h4>
+      <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
+        <img id="beer-image" src="<%= beer.image %>">
+        <div id="beer-comment">
+          <strong>Comment</strong><br>
+          <%= beer.reviews.first.comments %>
+        </div>
+        <div id="beer-note">
+          <strong>My Notes</strong><br>
+          <%= beer.reviews.first.notes %>
+        </div>
+      </div>
     <% end %>
-    </h4>
-  <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
-    <img id="beer-image" src="<%= beer.image %>">
-    <div id="beer-comment">
-      <strong>Comment</strong><br>
-      <%= beer.reviews.first.comments %>
-    </div>
-    <div id="beer-note">
-      <strong>My Notes</strong><br>
-      <%= beer.reviews.first.notes %>
-    </div>
-  </div>
-<% end %>
-</ul>
+    </ul>
 
-<br><br>
+    <br><br>
 
-  <button type="button" class="beer-form-button">+ Add a beer</button>
-  <br><br>
+      <button type="button" class="beer-form-button">+ Add a beer</button>
+      <br><br>
 
-  <%= render 'new_form' %>
-<% end %>
+      <%= render 'new_form' %>
+    <% end %>
 
-<% end %>
+  <% end %>
 </div>
 
