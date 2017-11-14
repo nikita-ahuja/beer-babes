@@ -7,6 +7,7 @@ body {
     /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
 
 }
+
 // .top-nav-collapse {
 //     background-color: #3f51b5 !important;
 // }
@@ -77,7 +78,7 @@ h6 {
 //     padding-right: 30px;
 // }
 
-/*.nav-link {
+.nav-link {
     font-family: inherit;
     font-weight: bold;
     letter-spacing: 0.25em;
@@ -85,35 +86,35 @@ h6 {
     font-size: 0.7em;
     font-family: "Zilla Slab";
     color: black;
-}*/
+}
 
-// .navbar-link, .nav-link {
-//     color: #742727;
-//     /*font-family: Copse;*/
-//     font-family: "Pacifico";
-//     /*font-family: "Helvetica Neue";*/
-//     /*font-weight: bold;*/
-//     font-size: 1.25em;
-//     color: black;
-//     /*background-color: black;*/
-// }
+.navbar-link, .nav-link {
+    color: #742727;
+    /*font-family: Copse;*/
+    font-family: "Pacifico";
+    /*font-family: "Helvetica Neue";*/
+    /*font-weight: bold;*/
+    font-size: 1.25em;
+    color: black;
+    /*background-color: black;*/
+}
 
-// .navbar-link:hover {
-//     color: #742727;
-// }
+.navbar-link:hover {
+    color: #742727;
+}
 
-// .navbar-brand {
-//     font-family: "Pacifico", cursive;
-//     /*font-family: Copse;*/
-//     font-weight: lighter;
-//     font-size:  200% !important;
-//     /*color: #742727;*/
-//     color: black;
-// }
+.navbar-brand {
+    font-family: "Pacifico", cursive;
+    /*font-family: Copse;*/
+    font-weight: lighter;
+    font-size:  200% !important;
+    /*color: #742727;*/
+    color: black;
+}
 
-// .navbar-brand:hover {
-//     color: #742727;
-// }
+.navbar-brand:hover {
+    color: #742727;
+}
 
 #quiz-here{
     /*background-color: red;*/
@@ -160,10 +161,5 @@ h6 {
 .drink-btn:hover {
     background-color: #e8e8e8;
 }
-
-// .navbar-brand {
-//     position: relative;
-//     margin: auto;
-// }
 
 
