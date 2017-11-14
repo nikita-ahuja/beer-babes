@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+$(".users.new").ready(function () {
+  console.log("works")
+  $('#myModal').modal('show');
+  $(".btn").on('click',function(){
+    $('#myModal').modal('hide');
+  })
+});
+
+
+
 
 $(".add-beer-form").hide()
 $(".beer-form-button").on("click", function(e){
