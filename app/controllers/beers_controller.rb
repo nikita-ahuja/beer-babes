@@ -5,6 +5,7 @@ class BeersController < ApplicationController
       @beers = User.find(params[:user_id]).beers
     else
       @searched_beers = Beer.search(params[:search])
+      # binding.pry
     end
   end
 

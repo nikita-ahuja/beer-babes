@@ -1,6 +1,6 @@
   	<%= form_tag beers_path, :method => 'get', :class => "search-bar-form" do %>
       <p>
-        <%= text_field_tag :search, params[:search], :class => "beer-serach-bar" %>
-        <%= submit_tag "Search", name: nil, :class => "beer-serach-bar-button" %>
+        <%= text_field_tag :search, params[:search], :class => "beer-search-bar" %>
+        <%= submit_tag "Search", name: nil, :class => "beer-search-bar-button" %>
       </p>
     <% end %>
