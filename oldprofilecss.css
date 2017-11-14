@@ -80,8 +80,9 @@ div.error_messages > ul > li {
   color: black;
   text-decoration: underline;
   font-family: "Zilla Slab";
+
 }
 
-.sug-links:hover {
+.sug-links:active {
   color: #742727;
 }

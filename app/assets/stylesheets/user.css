@@ -1,18 +1,9 @@
-a {
-  color: #fed136; }
-  a:hover {
-    color: #fec503; }
-
-.text-primary {
-  color: #fed136 !important; }
-
 @media (min-width: 768px) {
   section#about {
     top: 0px;
-    padding-left: 400px; } }
+    padding-left: 450px; } }
 
-
-::-moz-selection {
+/*::-moz-selection {
   background: #fed136;
   text-shadow: none; }
 
@@ -26,10 +17,7 @@ img::selection {
 img::-moz-selection {
   background: transparent; }
 
-body {
-  -webkit-tap-highlight-color: #fed136; }
-
-
+*/
 .timeline {
   position: relative;
   padding: 0;
@@ -87,16 +75,19 @@ body {
         line-height: 14px;
         margin-top: 12px; }
     .circle-1 {
-      background: url("heart_icon.png");
-      background-repeat: no-repeat;
-      /*background-attachment: fixed;*/
-      background-position: center;
+      background: #A84800;
+    /*  background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;*/
+      /*background: url("heart_icon.jpg");*/
     }
     .circle-2{
-      background: url("beerbg.jpg");
+      /*background: url("beerbg.jpg");*/
+      background: #A83000;
     }
     .circle-3{
-      background: url("beerglassleft.jpg");
+      /*background: url("beerglassleft.jpg");*/
+      background: #903018;
     }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
@@ -124,9 +115,6 @@ body {
     margin-bottom: 0; }
 
 
-
-
-
 @media (min-width: 768px) {
   .timeline:before {
     left: 50%; }
@@ -151,10 +139,6 @@ body {
       float: right;
       padding: 0 30px 20px 20px;
       text-align: left; } }
-
-
-
-
 
 
 @media (min-width: 992px) {
@@ -186,3 +170,45 @@ body {
         margin-top: 40px; }
     .timeline > li.timeline-inverted > .timeline-panel {
       padding: 0 100px 20px 20px; } }
+
+a > div {
+  display: none;
+}
+
+a:active > div {
+  display: block;
+}
+
+.sug-links {
+  color: black;
+  text-decoration: underline;
+  font-family: "Zilla Slab";
+  font-size: 120% !important;
+}
+
+.sug-links:hover {
+  color: #742727;
+}
+
+.welcome, .subheading  {
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-size: 20px;
+  color: black;
+}
+
+.welcome {
+  padding-bottom: 50px;
+  font-size: 500% !important;
+  max-width: 70%;
+}
+
+
+.text-muted, footer {
+  font-family: "Zilla Slab";
+  font-size: 120% !important;
+  color: black !important;
+}
+
+
+

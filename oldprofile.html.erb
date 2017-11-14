@@ -53,13 +53,17 @@
 
 
        <% @suggestions.each do |suggestion| %>
-        <a href=<%= suggestion.image %>><%= suggestion.name %><div><img src=<%= suggestion.image %>></div></a>
+        <a href=<%= suggestion.image %>>
+        <%= suggestion.name %>
+        <div>
+        <img src=<%= suggestion.image %>>
+        </div>
+        </a>
 
 
         <br>
         <%end %>
 
-        <% end %>
       </div>
     </div>
     <!-- </div> -->
