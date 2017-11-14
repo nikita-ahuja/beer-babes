@@ -87,7 +87,10 @@ body {
         line-height: 14px;
         margin-top: 12px; }
     .circle-1 {
-      background: url("beerglassleft.jpg");
+      background: url("heart_icon.png");
+      background-repeat: no-repeat;
+      /*background-attachment: fixed;*/
+      background-position: center;
     }
     .circle-2{
       background: url("beerbg.jpg");
