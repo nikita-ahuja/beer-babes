@@ -53,7 +53,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker'
-gem 'pry'
+gem 'pry-rails'
 
 # BreweryDB API
 gem 'brewery_db'
@@ -64,3 +64,7 @@ gem 'autoprefixer-rails'
 
 gem "animate-rails"
 gem "font-awesome-rails"
+
+gem 'google_maps_service'
+gem 'google_places'
+gem 'geocoder'
