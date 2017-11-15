@@ -71,6 +71,8 @@
             </div>
         </section>
 
+
+<% if !(session[:user_id]) %>
     <div class="modal fade" id="myModal">
       <div class="modal-header">
         <a class="close" data-dismiss="modal">×</a>
@@ -83,3 +85,4 @@
         <a href="#" class="btn">Cheers!</a>
       </div>
     </div>
+<% end %>
