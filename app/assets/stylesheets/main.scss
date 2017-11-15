@@ -140,5 +140,28 @@ a > .regis-link:hover {
     color:black;
 }
 
+#myModal {
+    background-color: #e8e8e8;
+    width: 36%;
+    height: 40%;
+    margin: auto;
+    outline: 3px solid black;
+}
+
+#myModal h3 {
+    font-family: "Pacifico", cursive;
+    font-size: 400% !important;
+}
+
+#myModal p {
+    font-family: "Zilla Slab";
+    font-size: 200% !important;
+}
+
+#myModal a {
+    font-family: "Pacifico", cursive;
+    font-size: 200% !important;
+}
+
 
 
