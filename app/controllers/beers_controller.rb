@@ -12,8 +12,13 @@ class BeersController < ApplicationController
 
   def create
     @beer = Beer.find_or_initialize_by(name: params[:beer][:name])
-    @beer.update(beer_params)
-    redirect_back(fallback_location: user_beers_path)
+    if @beer.update(beer_params)
+      redirect_back(fallback_location: user_beers_path)
+    else
+      @beers = User.find(params[:user_id]).beers
+      @errors = "Your beer was not saved. Please provide name and/or rating."
+      render 'index'
+   end
   end
 
   def new

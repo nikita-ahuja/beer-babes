@@ -1,43 +1,48 @@
 <div class="beer-box">
   <h1>My Beers</h1>
 
+
   <% if @searched_beers %>
     <%= render 'shared/searched_beers' %>
   <% else %>
 
-    <% if logged_in? %>
 
-    <ul>
-    <% @beers.each_with_index do |beer, index| %>
-      <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse}, :class => "beer-name" %>
-        <% beer.reviews.find_by(user_id: current_user.id).rating.times do %>
-        <li class='fa fa-beer' aria-hidden='true'></li>
-        <% end %>
-        </h4>
-      <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
-        <% if beer.image %>
-        <img id="beer-image" src="<%= beer.image %>">
-        <% end %>
-        <div id="beer-comment">
-          <h5><strong>Comments</strong></h5>
-          <%= raw(beer.reviews.find_by(user_id: current_user.id).comments) %>
-        </div>
-        <div id="beer-note">
-          <h5><strong>My Notes</strong></h5>
-          <%= raw(beer.reviews.find_by(user_id: current_user.id).notes) %>
-        </div>
-         <%= link_to "edit", edit_user_beer_path(current_user, beer) %>
-         <%= link_to "delete", review_path(beer.reviews.find_by(user_id: current_user.id).id), method: :delete, data: { confirm: "This action will delete this beer from your list. Are you sure?" } %>
 
-      </div>
+    <% if @beers && logged_in?  %>
+
+      <ul>
+      <% @beers.each_with_index do |beer, index| %>
+        <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse}, :class => "beer-name" %>
+          <% beer.reviews.find_by(user_id: current_user.id).rating.times do %>
+          <li class='fa fa-beer' aria-hidden='true'></li>
+          <% end %>
+          </h4>
+        <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
+          <% if beer.image %>
+          <img id="beer-image" src="<%= beer.image %>">
+          <% end %>
+          <div id="beer-comment">
+            <h5><strong>Comments</strong></h5>
+            <%= raw(beer.reviews.find_by(user_id: current_user.id).comments) %>
+          </div>
+          <div id="beer-note">
+            <h5><strong>My Notes</strong></h5>
+            <%= raw(beer.reviews.find_by(user_id: current_user.id).notes) %>
+          </div>
+           <%= link_to "edit", edit_user_beer_path(current_user, beer) %>
+           <%= link_to "delete", review_path(beer.reviews.find_by(user_id: current_user.id).id), method: :delete, data: { confirm: "This action will delete this beer from your list. Are you sure?" } %>
+
+        </div>
+      <% end %>
+      </ul>
+
     <% end %>
-    </ul>
 
     <br><br>
 
-      <%= render partial: 'new_form',  locals: {beer: @beer} %>
+    <%= render partial: 'new_form',  locals: {beer: @beer} %>
 
-    <% end %>
+
 
   <% end %>
 </div>
