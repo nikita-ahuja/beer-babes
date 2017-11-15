@@ -1,0 +1,88 @@
+a > div {
+  display: none;
+}
+
+a:hover > div {
+  display: block;
+}
+
+/*.transbox {
+  background-color: white;
+  opacity: 0.6;
+  filter: alpha(opacity=60);  for IE* and earlier
+  border-radius: 10px;
+  padding: 5% 5% 10% 5%;
+  width: 70%;
+  margin: auto;
+}*/
+
+div.error_messages > ul > li {
+  list-style-type: none;
+}
+
+
+.profile-display {
+    /*padding-top: 50px;*/
+    margin: auto;
+    position: relative;
+   /* background-color: white;
+    opacity: 0.6;*/
+   /* background-color: rgba(229, 228, 255, 0.5);*/
+   /*background-color: #742727;*/
+    background-color: rgba(116, 39, 39, 0.2);
+   /*opacity: 0.2;*/
+    /*max-width: 30%;*/
+    /*padding: 30px;*/
+    border: 3px solid #742727;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.transbox {
+  margin: auto;
+}
+
+.profile-info {
+  padding-top: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.shared-links{
+  position:absolute;
+  top:0;
+  right:0;
+  max-width: 20%;
+}
+
+
+.results {
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  font-size: 20px;
+  /*font-size:  200% !important;*/
+  color: black;
+}
+
+.prefs, .welcome, .reviews, .suggestions {
+  font-family: "Zilla Slab";
+  /*color: black;*/
+}
+
+
+.reviews {
+  margin-top: 15px;
+  padding-top: 5px;
+}
+
+.sug-links {
+  color: black;
+  text-decoration: underline;
+  font-family: "Zilla Slab";
+
+}
+
+.sug-links:active {
+  color: #742727;
+}

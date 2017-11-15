@@ -15,9 +15,7 @@
   </head>
 
 
-
-
-  <body>
+<body class="<%= controller_name %> <%= action_name %>">
 <!--Main Navigation-->
   <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -60,18 +58,31 @@
   </div><!-- container-fluid -->
 </nav>
 
-
         <!-- Intro Section -->
         <section class="view intro-2 hm-gradient">
             <div class="full-bg-img">
                 <div class="container flex-center">
                     <div class="d-flex align-items-center content-height">
                         <div class="row flex-center pt-5 mt-3">
-
                              <%= yield %>
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+<% if !(session[:user_id]) %>
+    <div class="modal fade" id="myModal">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Beer Babes</h3>
+      </div>
+      <div class="modal-body">
+        <p>An app that helps you make sure the beer you're drinking is actually worth the hangover.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Cheers!</a>
+      </div>
+    </div>
+<% end %>

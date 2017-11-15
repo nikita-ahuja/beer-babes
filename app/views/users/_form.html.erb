@@ -2,133 +2,148 @@
 <div class="col-md-offset-6">
     <div class="card wow fadeIn" data-wow-delay="0.3s">
     <div class="card-body">
+        <% if @user.errors.any? %>
+          <div class="error_messages">
+            <br>
+            <h3>Sorry...</h3>
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
         <!--Header-->
-        <br>
-        <div class="text-center">
-            <h2 class="white-text"></i> Register:</h2>
-            <hr class="hr-light">
-            <!-- <i class="fa fa-user white-text"> -->
+        <% if current_user %>
+            <p class="massive-quote">Drink like a girl.</p>
+        <% else %>
+            <br>
+            <div class="text-center">
+                <h2 class="white-text"></i> Register:</h2>
+                <hr class="hr-light">
+                <!-- <i class="fa fa-user white-text"> -->
+            </div>
+
+            <!--Body-->
+                <div class="md-form">
+                    <!-- <i class="fa fa-user prefix white-text active"></i> -->
+                    <label for="form3" class="active" >Username</label>
+                    <input type="text" id="form3" placeholder="Username" class="form-control" name="user[username]"/>
+
+                </div>
+                <p></p>
+                <div class="md-form">
+                    <!-- <i class="fa fa-envelope prefix white-text active"></i> -->
+                    <label for="form2" class="active">Email</label>
+                    <input type="email" id="form2" placeholder="Email" class="form-control" name="user[email]"/>
+
+                </div>
+                <p></p>
+
+            <div class="md-form">
+                <!-- <i class="fa fa-lock prefix white-text active"></i> -->
+                <label for="form4" class="active">Password</label>
+                <input type="password" id="form4" placeholder="Password" class="form-control" name="user[password]"/>
+            </div>
+
+            <p></p>
+
+            <div class="md-form">
+                <!-- <i class="fa fa-lock prefix white-text active"></i> -->
+                <label for="form4" class="active">Password Confirmation</label>
+                <input type="password" id="form4" class="form-control" placeholder="Password Confirmation" name="user[password_confirmation]"/>
+            </div>
+
+            <p></p>
+            <p class="more-information">
+              <!--   <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i> -->
+              <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
+            </p>
         </div>
-
-        <!--Body-->
-        <div class="md-form">
-            <!-- <i class="fa fa-user prefix white-text active"></i> -->
-            <label for="form3" class="active" >Username</label>
-            <input type="text" id="form3" placeholder="Username" class="form-control" name="user[username]"/>
-
         </div>
-        <p></p>
-        <div class="md-form">
-            <!-- <i class="fa fa-envelope prefix white-text active"></i> -->
-            <label for="form2" class="active">Email</label>
-            <input type="email" id="form2" placeholder="Email" class="form-control" name="user[email]"/>
-
-        </div>
-        <p></p>
-
-        <div class="md-form">
-            <!-- <i class="fa fa-lock prefix white-text active"></i> -->
-            <label for="form4" class="active">Password</label>
-            <input type="password" id="form4" placeholder="Password" class="form-control" name="user[password]"/>
-        </div>
-
-        <p></p>
-
-        <div class="md-form">
-            <!-- <i class="fa fa-lock prefix white-text active"></i> -->
-            <label for="form4" class="active">Password Confirmation</label>
-            <input type="password" id="form4" class="form-control" placeholder="Password Confirmation" name="user[password_confirmation]"/>
-        </div>
-
-        <p></p>
-        <p class="more-information">
-          <!--   <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i> -->
-          <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
-        </p>
     </div>
-    </div>
-</div>
 
-<div class="col-md-offset-6">
-        <div class="modal-body" id="beer-formy" style="display:none;">
-        <h1>On a scale of 1-5...</h1>
-        <h2>How much do you enjoy light beer?</h2>
-        <div class="light-beer-ques beer-preference">
-            <input type="radio" id="light-rating-1" class="light-rating-input" name="user[light_rating]" value="1"/>
-            <label class="beer-glass" for="light-rating-1"></label>
+    <div class="col-md-offset-6">
+            <div class="modal-body" id="beer-formy" style="display:none;">
+            <h1>On a scale of 1-5...</h1>
+            <h2>How much do you enjoy light beer?</h2>
+            <div class="light-beer-ques beer-preference">
+                <input type="radio" id="light-rating-1" class="light-rating-input" name="user[light_rating]" value="1"/>
+                <label class="beer-glass" for="light-rating-1"></label>
 
-            <input type="radio" id="light-rating-2" class="light-rating-input" name="user[light_rating]" value="2"/>
-            <label class="beer-glass" for="light-rating-2"></label>
+                <input type="radio" id="light-rating-2" class="light-rating-input" name="user[light_rating]" value="2"/>
+                <label class="beer-glass" for="light-rating-2"></label>
 
-            <input type="radio" id="light-rating-3" class="light-rating-input" name="user[light_rating]" value="3"/>
-            <label class="beer-glass" for="light-rating-3"></label>
+                <input type="radio" id="light-rating-3" class="light-rating-input" name="user[light_rating]" value="3"/>
+                <label class="beer-glass" for="light-rating-3"></label>
 
-            <input type="radio" id="light-rating-4" class="light-rating-input" name="user[light_rating]" value="4"/>
-            <label class="beer-glass" for="light-rating-4"></label>
+                <input type="radio" id="light-rating-4" class="light-rating-input" name="user[light_rating]" value="4"/>
+                <label class="beer-glass" for="light-rating-4"></label>
 
-            <input type="radio" id="light-rating-5" class="light-rating-input" name="user[light_rating]" value="5"/>
-            <label class="beer-glass" for="light-rating-5"></label>
+                <input type="radio" id="light-rating-5" class="light-rating-input" name="user[light_rating]" value="5"/>
+                <label class="beer-glass" for="light-rating-5"></label>
 
-            <br></br>
+                <br></br>
 
-            <span class="rate-nums">12345</span>
-        </div>
+                <span class="rate-nums">12345</span>
+            </div>
 
-        <h2>How much do you enjoy dark beer?</h2>
-        <div class="dark-beer-ques beer-preference">
-            <input type="radio" id="dark-rating-1" class="dark-rating-input" name="user[dark_rating]" value="1" />
-            <label class="beer-glass" for="dark-rating-1"></label>
+            <h2>How much do you enjoy dark beer?</h2>
+            <div class="dark-beer-ques beer-preference">
+                <input type="radio" id="dark-rating-1" class="dark-rating-input" name="user[dark_rating]" value="1" />
+                <label class="beer-glass" for="dark-rating-1"></label>
 
-            <input type="radio" id="dark-rating-2" class="dark-rating-input" name="user[dark_rating]" value="2"/>
-            <label class="beer-glass" for="dark-rating-2"></label>
+                <input type="radio" id="dark-rating-2" class="dark-rating-input" name="user[dark_rating]" value="2"/>
+                <label class="beer-glass" for="dark-rating-2"></label>
 
-            <input type="radio" id="dark-rating-3" class="dark-rating-input" name="user[dark_rating]g" value="3"/>
-            <label class="beer-glass" for="dark-rating-3"></label>
+                <input type="radio" id="dark-rating-3" class="dark-rating-input" name="user[dark_rating]g" value="3"/>
+                <label class="beer-glass" for="dark-rating-3"></label>
 
-            <input type="radio" id="dark-rating-4" class="dark-rating-input" name="user[dark_rating]" value="4"/>
-            <label class="beer-glass" for="dark-rating-4"></label>
+                <input type="radio" id="dark-rating-4" class="dark-rating-input" name="user[dark_rating]" value="4"/>
+                <label class="beer-glass" for="dark-rating-4"></label>
 
-            <input type="radio" id="dark-rating-5" class="dark-rating-input" name="user[dark_rating]" value="5"/>
-            <label class="beer-glass" for="dark-rating-5"></label>
+                <input type="radio" id="dark-rating-5" class="dark-rating-input" name="user[dark_rating]" value="5"/>
+                <label class="beer-glass" for="dark-rating-5"></label>
 
-            <br></br>
+                <br></br>
 
-            <span class="rate-nums">12345</span>
-        </div>
+                <span class="rate-nums">12345</span>
+            </div>
 
-        <h2>How much do you enjoy hoppy beer?</h2>
-        <div class="hoppy-beer-ques beer-preference">
-            <input type="radio" id="hoppy-rating-1" class="hoppy-rating-input" name="user[hoppy_rating]" value="1"/>
-            <label class="beer-glass" for="hoppy-rating-1"></label>
+            <h2>How much do you enjoy hoppy beer?</h2>
+            <div class="hoppy-beer-ques beer-preference">
+                <input type="radio" id="hoppy-rating-1" class="hoppy-rating-input" name="user[hoppy_rating]" value="1"/>
+                <label class="beer-glass" for="hoppy-rating-1"></label>
 
-            <input type="radio" id="hoppy-rating-2" class="hoppy-rating-input" name="user[hoppy_rating]" value="2"/>
-            <label class="beer-glass" for="hoppy-rating-2"></label>
+                <input type="radio" id="hoppy-rating-2" class="hoppy-rating-input" name="user[hoppy_rating]" value="2"/>
+                <label class="beer-glass" for="hoppy-rating-2"></label>
 
-            <input type="radio" id="hoppy-rating-3" class="hoppy-rating-input" name="user[hoppy_rating]" value="3"/>
-            <label class="beer-glass" for="hoppy-rating-3"></label>
+                <input type="radio" id="hoppy-rating-3" class="hoppy-rating-input" name="user[hoppy_rating]" value="3"/>
+                <label class="beer-glass" for="hoppy-rating-3"></label>
 
-            <input type="radio" id="hoppy-rating-4" class="hoppy-rating-input" name="user[hoppy_rating]" value="4"/>
-            <label class="beer-glass" for="hoppy-rating-4"></label>
+                <input type="radio" id="hoppy-rating-4" class="hoppy-rating-input" name="user[hoppy_rating]" value="4"/>
+                <label class="beer-glass" for="hoppy-rating-4"></label>
 
-            <input type="radio" id="hoppy-rating-5" class="hoppy-rating-input" name="user[hoppy_rating]" value="5"/>
-            <label class="beer-glass" for="hoppy-rating-5"></label>
+                <input type="radio" id="hoppy-rating-5" class="hoppy-rating-input" name="user[hoppy_rating]" value="5"/>
+                <label class="beer-glass" for="hoppy-rating-5"></label>
 
-            <br></br>
+                <br></br>
 
-            <span class="rate-nums">12345</span>
-        </div>
+                <span class="rate-nums">12345</span>
+            </div>
 
-        <p></p>
+            <p></p>
 
-        <div class="text-center">
-            <button class="drink-btn">Start Drinking</button>
-             <hr class="hr-light mb-3 mt-4">
+            <div class="text-center">
+                <button class="drink-btn">Start Drinking</button>
+                 <hr class="hr-light mb-3 mt-4">
+      <% end %>
 
-                <div class="inline-ul text-center d-flex justify-content-center">
+                <!-- <div class="inline-ul text-center d-flex justify-content-center">
                     <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text"></i></a>
                     <a class="icons-sm li-ic"><i class="fa fa-linkedin white-text"> </i></a>
                     <a class="icons-sm ins-ic"><i class="fa fa-instagram white-text"> </i></a>
-                </div>
+                </div> -->
         </div>
 
     </div><!-- end modal-body -->

@@ -54,9 +54,15 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    if @user.update_attributes(user_params)
-      redirect_to user_path(@user)
+    # binding.pry
+    if @user.authenticate(params[:user][:current_password])
+      if @user.update_attributes(user_params)
+        redirect_to user_path(@user)
+      else
+        render 'edit'
+      end
     else
+      @errors = "Invalid password."
       render 'edit'
     end
   end
