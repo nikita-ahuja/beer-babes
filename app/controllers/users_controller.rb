@@ -26,12 +26,16 @@ class UsersController < ApplicationController
       current_user.reviews.each do |review|
         if review.rating >= 4
           Beer.where(id: review.beer_id).each do |beer|
-            # @suggestions << Beer.find_by(beer_style: beer.beer_style)
-            @suggestions << Beer.find_by(characteristic: beer.characteristic)
+            Beer.where(characteristic: beer.characteristic).each do |specific_beer|
+              if !current_user.beers.include? specific_beer
+                @suggestions << specific_beer
+              end
+            end
           end
         end
       end
     @suggestions.uniq!
+    # binding.pry
 
     users = User.where(["light_rating = ? or hoppy_rating = ? or dark_rating = ?", current_user.light_rating, current_user.hoppy_rating, current_user.dark_rating])
 

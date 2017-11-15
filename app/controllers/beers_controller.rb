@@ -34,12 +34,12 @@ class BeersController < ApplicationController
     @review = Review.where(user_id: current_user.id, beer_id: params[:id]).first
   # binding.pry
   end
-  
+
   def update
   end
 
 private
   def beer_params
-    params.require(:beer).permit(:name, :independent, reviews_attributes: [ :comments, :notes, :location, :rating, :user_id])
+    params.require(:beer).permit(:name, :independent, :characteristic, :beer_style, reviews_attributes: [ :comments, :notes, :location, :rating, :user_id])
   end
 end
