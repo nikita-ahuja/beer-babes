@@ -126,6 +126,11 @@ img::-moz-selection {
   .timeline .timeline-body > p {
     margin-bottom: 0; }
 
+@media (max-width: 768px) {
+  .circle-1, .circle-2, .circle-3 {
+    background-size: 50px; }
+  }
+
 
 @media (min-width: 768px) {
   .timeline:before {
@@ -146,11 +151,14 @@ img::-moz-selection {
       .timeline > li .timeline-image h4 {
         font-size: 13px;
         line-height: 18px;
-        margin-top: 16px; }
+        margin-top: 16px;
+        /*background-size: 50px;*/
+      }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       padding: 0 30px 20px 20px;
-      text-align: left; } }
+      text-align: left; }
+      }
 
 
 @media (min-width: 992px) {
@@ -225,6 +233,7 @@ a:active > div {
   font-size: 120% !important;
   color: black !important;
 }
+
 
 
 
