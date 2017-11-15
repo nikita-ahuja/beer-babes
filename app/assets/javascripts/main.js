@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+$(".users.new").ready(function () {
+  $('#myModal').modal('show');
+  $(".btn").on('click',function(){
+    $('#myModal').modal('hide');
+  })
+});
+
 
 $(".add-beer-form").hide()
 $(".beer-form-button").on("click", function(e){
@@ -33,6 +40,5 @@ $(".more-information").on("click" ,function(){
         scrollTop: $("#beer-formy").offset().top
     }, 1000);
 });
-
 
 });
