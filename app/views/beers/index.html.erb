@@ -10,7 +10,7 @@
     <ul>
     <% @beers.each_with_index do |beer, index| %>
       <h4><%= link_to beer.name, "#beer-info#{index.to_s}", data: {toggle: :collapse}, :class => "beer-name" %>
-        <% beer.reviews.first.rating.times do %>
+        <% beer.reviews.find_by(user_id: current_user.id).rating.times do %>
         <li class='fa fa-beer' aria-hidden='true'></li>
         <% end %>
         </h4>
@@ -20,12 +20,15 @@
         <% end %>
         <div id="beer-comment">
           <h5><strong>Comments</strong></h5>
-          <%= raw(beer.reviews.first.comments) %>
+          <%= raw(beer.reviews.find_by(user_id: current_user.id).comments) %>
         </div>
         <div id="beer-note">
           <h5><strong>My Notes</strong></h5>
-          <%= raw(beer.reviews.first.notes) %>
+          <%= raw(beer.reviews.find_by(user_id: current_user.id).notes) %>
         </div>
+         <%= link_to "edit", edit_user_beer_path(current_user, beer) %>
+         <%= link_to "delete", review_path(beer.reviews.find_by(user_id: current_user.id).id), method: :delete, data: { confirm: "This action will delete this beer from your list. Are you sure?" } %>
+
       </div>
     <% end %>
     </ul>

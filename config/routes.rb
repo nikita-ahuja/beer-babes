@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :beers
 
+  resources :reviews, only: [:update, :destroy]
+
   resources :users do
     resources :beers
   end

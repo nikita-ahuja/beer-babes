@@ -1,0 +1,38 @@
+<div class="edit-comment-form">
+  <%= simple_form_for @review do |form| %>
+    
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@review.errors.count, "error") %>
+            prohibited this article from being saved:
+        </h2>
+        <ul>
+          <% @review.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+   
+    <%#= form.simple_fields_for :reviews do |review| %>
+    <p>
+      <%= form.input :comments,  as: :ckeditor, input_html: {:ckeditor => {uiColor: '#FFFFFF', height: 55,:toolbar => 'Mini'}} %>
+    </p>
+    <p>
+      <%= form.input :notes, as: :ckeditor, input_html: {:ckeditor => {uiColor: '#FFFFFF', height: 50, :toolbar => 'Pure'}} %>
+    </p>
+  
+    <p>
+      <%= form.input :date, as: :date, html5: true %>
+    </p>
+    <p>
+      <%= form.input :rating, as: :radio_buttons, collection: [ 1,2,3,4,5 ], item_label_class: "radio-inline",  :item_wrapper_tag => false %>
+    </p>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+   <%# end %>
+    <%= form.submit 'Save', :class => "beer-save-button" %>
+  <% end %>
+
+
+</div>

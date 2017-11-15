@@ -11,8 +11,8 @@ class BeersController < ApplicationController
   end
 
   def create
-    @beer = Beer.new(beer_params)
-    @beer.save
+    @beer = Beer.find_or_initialize_by(name: params[:beer][:name])
+    @beer.update(beer_params)
     redirect_back(fallback_location: user_beers_path)
   end
 
@@ -23,6 +23,14 @@ class BeersController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
     # @place = GoogleMapsApi::GOOGLEPLACES.spots_by_query(@beer.city)
+  end
+
+  def edit
+    @review = Review.where(user_id: current_user.id, beer_id: params[:id]).first
+  # binding.pry
+  end
+  
+  def update
   end
 
 private
