@@ -29,13 +29,20 @@
     padding-bottom: 6%;
     color: black;
     text-align: justify;
+    font-family: "Zilla Slab";
 }
 
+.beer-box .mybeer-info h5 {
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+}
 .fa-beer {
     // color: #D5BC28;
     color: #e5d0bd;
-    // color: #4F1508;
-    // text-shadow: 3px 3px 8px #272634;
+    //color: #4F1508;
+     text-shadow: 3px 3px 8px #272634;
     // outline: solid 1px black;
 }
 
@@ -91,7 +98,7 @@
     border-radius: 4px;
 }
 
-
+beer-form-button {
     font-size: 1.25em;
     letter-spacing: 1px;
 }
@@ -105,7 +112,7 @@
     font-family: "Zilla Slab";
     font-size: 120% !important;
     color: black !important;
-    text-decoration: underline;
+    //text-decoration: underline;
 }
 
 .beer-name:hover {
