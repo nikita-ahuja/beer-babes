@@ -62,3 +62,34 @@
     text-transform: uppercase;
     font-size: 0.7em;
 }
+
+.beer-save-button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    height: 3.75em;
+    line-height: 3.75em;
+    padding: 0 1em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: solid 1px #787878 !important;
+    color: inherit;
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.add-beer-form {
+     border: solid 0.5px #b4b4b4 !important;
+     padding: 2em;
+     margin: 2em;
+    border-radius: 4px;
+}
+
+
+

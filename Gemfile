@@ -68,7 +68,7 @@ gem "font-awesome-rails"
 
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'ckeditor', '~> 4.1'
+gem 'ckeditor'
 
 gem 'google_maps_service'
 gem 'google_places'

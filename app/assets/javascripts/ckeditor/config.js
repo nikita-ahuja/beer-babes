@@ -1,6 +1,6 @@
 CKEDITOR.editorConfig = function(config) {
   config.language = 'en';
-  config.width = '700';
+  //config.width = '410';
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
   config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
   config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
@@ -10,24 +10,30 @@ CKEDITOR.editorConfig = function(config) {
   config.toolbar_Pure = [
     '/', {
       name: 'basicstyles',
-      items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']
+      items: ['Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat']
     }, {
       name: 'paragraph',
-      items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
-    }, {
-      name: 'links',
-      items: ['Link', 'Unlink']
-    }, '/', {
-      name: 'styles',
-      items: ['Styles', 'Format', 'Font', 'FontSize']
+      items: ['NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
     }, {
       name: 'colors',
-      items: ['TextColor', 'BGColor']
+      items: ['TextColor']
     }, {
       name: 'insert',
-      items: ['Image', 'Table', 'HorizontalRule', 'PageBreak']
+      items: ['Image', 'HorizontalRule', 'Smiley']
     }
   ];
   config.toolbar = 'Pure';
+
+
+  config.toolbar_Mini = [
+    '/', {
+      name: 'basicstyles',
+      items: ['Bold', 'Italic', 'RemoveFormat']
+    }, {
+      name: 'insert',
+      items: ['Image','Smiley']
+    }
+  ];
+  config.toolbar = 'Mini';
   return true;
 };

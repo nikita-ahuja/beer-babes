@@ -17,18 +17,32 @@
     <p>
       <%= form.input :name %>
     </p>
+
+    <p>
+      <%= form.input :brewery %>
+    </p>
+
     <p>
       <%= form.input :independent, collection: ["Independent", "No Independent"] %>
     </p>
+
+    <p>
+      <%= form.input :beer_style, :placeholder => "Hefeweizen Porter Imperial Stout Session IPA ..." %>
+    </p>
+
+    <p>
+      <%= form.input :characteristic, collection: ["Hoppy", "Dark", "Light"] %>
+    </p>
+
     <%= form.simple_fields_for :reviews do |review| %>
     <p>
-      <%= review.input :comments, as: :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}} %>
+      <%= review.input :comments, as: :ckeditor, input_html: {:ckeditor => {uiColor: '#FFFFFF', height: 55,:toolbar => 'Mini'}} %>
     </p>
     <p>
-      <%= review.input :notes %>
+      <%= review.input :notes, as: :ckeditor, input_html: {:ckeditor => {uiColor: '#FFFFFF', height: 50, :toolbar => 'Pure'}} %>
     </p>
     <p>
-      <%= review.input :location %>
+      <%= review.input :location, :placeholder => "Brewery/Store Name, City, State" %>
     </p>
     <p>
       <%= review.input :date, as: :date, html5: true %>
@@ -38,6 +52,6 @@
     </p>
     <%= review.hidden_field :user_id, :value => current_user.id %>
    <% end %>
-    <%= form.submit 'Save' %>
+    <%= form.submit 'Save', :class => "beer-save-button" %>
   <% end %>
 </div>

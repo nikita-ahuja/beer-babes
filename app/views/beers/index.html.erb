@@ -15,14 +15,16 @@
         <% end %>
         </h4>
       <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
+        <% if beer.image %>
         <img id="beer-image" src="<%= beer.image %>">
+        <% end %>
         <div id="beer-comment">
           <strong>Comment</strong><br>
           <%= raw(beer.reviews.first.comments) %>
         </div>
         <div id="beer-note">
           <strong>My Notes</strong><br>
-          <%= beer.reviews.first.notes %>
+          <%= raw(beer.reviews.first.notes) %>
         </div>
       </div>
     <% end %>
