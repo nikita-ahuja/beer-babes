@@ -26,7 +26,8 @@ class UsersController < ApplicationController
       current_user.reviews.each do |review|
         if review.rating >= 4
           Beer.where(id: review.beer_id).each do |beer|
-            @suggestions << Beer.find_by(style: beer.style)
+            # @suggestions << Beer.find_by(beer_style: beer.beer_style)
+            @suggestions << Beer.find_by(characteristic: beer.characteristic)
           end
         end
       end

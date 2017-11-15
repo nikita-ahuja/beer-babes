@@ -1,9 +1,44 @@
 body {
-    background: asset-url("beerglassleft.jpg") no-repeat center center;
-    background-size: cover;
+    background: asset-url("beerglassleftsmall2.jpg") no-repeat center center;
+    /*background: asset-url("beerglassleftsmall2.jpg");*/
+    /*background-color: rgba(247, 169, 0, 1);*/
+    background-repeat:no-repeat;
+    /*background-size:contain;*/
+    background-position:center center;
     background-attachment: fixed;
+    background-size: cover;
+    /*backdrop-filter:(5px);*/
     /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
+    /*filter: blur(5px);*/
 }
+
+
+/*.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: asset-url("beerglassleftsmall2.jpg");
+*/
+
+/*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);*/
+/*}*/
+
+/*.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+  filter: blur(0px);
+*/
 
 .hm-gradient .full-bg-img {
     background: -webkit-linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 100%);
@@ -24,7 +59,7 @@ body {
 }
 
 .md-form label {
-    /*color: #ffffff;*/
+    color: #ffffff;
     font-size: 0.8em;
 }
 
@@ -40,7 +75,7 @@ h6 {
 
 .navbar-link, .nav-link {
     color: #742727;
-    /*font-family: Copse;*/
+    /*font-family: Copse; */
     font-family: "Pacifico";
     /*font-family: "Helvetica Neue";*/
     /*font-weight: bold;*/
@@ -54,7 +89,7 @@ h6 {
 }
 
 .navbar-brand {
-    font-family: "Pacifico", cursive;
+    font-family: "Pacifico", cursive !important;
     /*font-family: Copse;*/
     font-weight: lighter;
     font-size:  200% !important;
@@ -121,6 +156,8 @@ h6 {
     background-color: rgba(102, 38, 8, 0)  !important;
     border-color: rgba(102, 38, 8, 0) !important;
     padding-top: 10px;
+    /*background-color: black !important;*/
+    position: fixed;
 }
 
 .icon-bar {
