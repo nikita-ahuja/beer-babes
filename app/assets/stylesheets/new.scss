@@ -40,6 +40,7 @@ h1{
 }
 
 .beer-glass{
+    float: right;
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -52,20 +53,25 @@ h1{
     -moz-filter: brightness(1.8) grayscale(1) opacity(.3);
     filter: brightness(1.8) grayscale(1) opacity(.3)
 }
-.beer-glass:hover{
+
+.beer-glass:hover,
+// .beer-glass:hover ~ .beer-glass {
+.beer-glass:hover ~ .beer-glass,
+.beer-glass:checked ~ .beer-glass:hover ~ .beer-glass {
     -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
-    filter: brightness(1.2) grayscale(.5) opacity(1)
+    filter: brightness(1.2) grayscale(.5) opacity(1);
+    background-position: 0 0;
 }
 
-.rate-nums {
-    letter-spacing: 100px;
-    position: relative;
-    margin:auto;
-    left: 30px;
-    font-family: 'Zilla Slab';
-    font-size: 15px
-}
+// .rate-nums {
+//     letter-spacing: 100px;
+//     position: relative;
+//     margin:auto;
+//     left: 50px;
+//     font-family: 'Zilla Slab';
+//     font-size: 15px
+// }
 
 .container {
     position: relative;
