@@ -24,28 +24,6 @@
                     <br>
                     Hoppy beer ranking: <%= @current_user.hoppy_rating %>
                     <br>
-                    <!-- Based on these results, you are... -->
-                    <br>
-                    <% case @current_user.hoppy_rating %>
-                    <% when 4 || 5  %>
-                    <%= " a HOP - tometrist!" %>
-                    <% end %>
-
-                    <% case @current_user.dark_rating %>
-                    <% when 4 || 5  %>
-                    <%= "All about porter and stout!" %>
-                    <% end %>
-
-                    <% case @current_user.light_rating %>
-                    <% when 4 || 5  %>
-                    <%= "a beach blonde babe!" %>
-                    <% end %>
-
-                    <% case @current_user.light_rating || @current_user.dark_rating || @current_user.hoppy_rating %>
-                    <% when 1 || 2 || 3 || 4 || 5  %>
-                    <%= "an all around beer lover!" %>
-
-                    <% end %>
                     </p>
                   </div>
                 </div>

@@ -1,7 +1,11 @@
 body {
-    background: asset-url("beerglassleft.jpg") no-repeat center center;
-    background-size: cover;
+    /*background: asset-url("beerglassleft.jpg") no-repeat center center;*/
+    background: asset-url("beerglassleft.jpg");
+    background-repeat:no-repeat;
+    /*background-size:contain;*/
+    background-position:center center;
     background-attachment: fixed;
+    background-size: cover;
     /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
 }
 

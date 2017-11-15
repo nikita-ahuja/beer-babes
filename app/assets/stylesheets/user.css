@@ -18,6 +18,7 @@ img::-moz-selection {
   background: transparent; }
 
 */
+
 .timeline {
   position: relative;
   padding: 0;
@@ -30,11 +31,14 @@ img::-moz-selection {
     width: 2px;
     margin-left: -1.5px;
     content: '';
-    background-color: #e9ecef; }
+    /*background-color: #e9ecef;*/
+    background-color: rgba(226, 198, 179, 0.96);
+  }
   .timeline > li {
     position: relative;
     min-height: 50px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+  }
     .timeline > li:after, .timeline > li:before {
       display: table;
       content: ' '; }
@@ -65,9 +69,12 @@ img::-moz-selection {
       margin-left: 0;
       text-align: center;
       color: white;
-      border: 7px solid #e9ecef;
+      /*border: 7px solid rgba(252, 225, 199, 1);*/
+      border: 7px solid rgba(226, 198, 179, 0.96);
+      /*border: 7px solid #e9ecef;*/
       border-radius: 100%;
       /*background-color: #e8e8e8;*/
+      background-color: rgba(154, 67, 63, .94);
       /*background: url("beerglassleft.jpg");*/
     }
       .timeline > li .timeline-image h4 {
@@ -75,19 +82,24 @@ img::-moz-selection {
         line-height: 14px;
         margin-top: 12px; }
     .circle-1 {
-      background: #A84800;
-    /*  background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;*/
-      /*background: url("heart_icon.jpg");*/
+      /*background: rgba(168, 72, 0, 1.0);*/
+      /*background-attachment: fixed;*/
+      background: url("heart_icon.png");
+      background-repeat: no-repeat;
+      background-position: center;
     }
     .circle-2{
-      /*background: url("beerbg.jpg");*/
-      background: #A83000;
+      background: url("fizzy.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      /*background: #A83000;*/
     }
     .circle-3{
       /*background: url("beerglassleft.jpg");*/
-      background: #903018;
+      background: url("cheers.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      /*background: #903018;*/
     }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
@@ -165,6 +177,8 @@ img::-moz-selection {
     .timeline > li .timeline-image {
       width: 170px;
       height: 170px;
+     /* width: 150px;
+      height: 150px;*/
       margin-left: -85px; }
       .timeline > li .timeline-image h4 {
         margin-top: 40px; }
@@ -200,7 +214,9 @@ a:active > div {
 .welcome {
   padding-bottom: 50px;
   font-size: 500% !important;
-  max-width: 70%;
+  max-width: 60%;
+  /*padding-left: 300px;*/
+  float: left;
 }
 
 
