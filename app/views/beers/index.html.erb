@@ -19,7 +19,7 @@
           </h4>
         <div id="beer-info<%= index.to_s %>" class='collapse mybeer-info'>
           <% if beer.image %>
-          <img id="beer-image" src="<%= beer.image %>">
+          <!-- <img id="beer-image" src="<%#= beer.image %>"> -->
           <% end %>
           <div id="beer-comment">
             <h5><strong>Comments</strong></h5>
@@ -29,9 +29,13 @@
             <h5><strong>My Notes</strong></h5>
             <%= raw(beer.reviews.find_by(user_id: current_user.id).notes) %>
           </div>
-           <%= link_to "edit", edit_user_beer_path(current_user, beer) %>
-           <%= link_to "delete", review_path(beer.reviews.find_by(user_id: current_user.id).id), method: :delete, data: { confirm: "This action will delete this beer from your list. Are you sure?" } %>
-
+          <div>
+           Drank it at: <%= raw(beer.reviews.find_by(user_id: current_user.id).date) %>  |  
+           Last update: <%= (beer.reviews.find_by(user_id: current_user.id).updated_at).strftime("%F") %>
+          </div>
+            <%= link_to "Edit", edit_user_beer_path(current_user, beer) %> |
+            <%= link_to "Delete", review_path(beer.reviews.find_by(user_id: current_user.id).id), method: :delete, data: { confirm: "This action will delete this beer from your list. Are you sure?" } %> | 
+            <%= link_to "Beer Info", beer_path(beer) %>
         </div>
       <% end %>
       </ul>

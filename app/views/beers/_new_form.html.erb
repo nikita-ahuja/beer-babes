@@ -13,7 +13,7 @@
     </p>
 
     <p>
-      <%= form.input :independent, collection: ["Independent", "No Independent"] %>
+      <%= form.input :independent, collection: ["Independent", "Not Independent"] %>
     </p>
 
     <p>
@@ -32,7 +32,7 @@
       <%= review.input :notes, as: :ckeditor, input_html: {:ckeditor => {uiColor: '#FFFFFF', height: 50, :toolbar => 'Pure'}} %>
     </p>
     <p>
-      <%= review.input :location, :placeholder => "Brewery/Store Name, City, State" %>
+      <%= review.input :location, :label => "Location (Brewery/Store Name, City, State)" %>
     </p>
     <p>
       <%= review.input :date, as: :date, html5: true %>

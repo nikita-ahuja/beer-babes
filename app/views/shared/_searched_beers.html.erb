@@ -1,7 +1,7 @@
 <% if @searched_beers %>
 <ul>
   <% @searched_beers.each do |beer| %>
-        <p><h3 id="searched-beer" class="link-box"><%= link_to( beer.name, beer_path(beer)) %></h3></p>
+        <p><h3 id="searched-beer" class="link-box sug-links"><%= link_to( beer.name, beer_path(beer)) %></h3></p>
   <%end %>
 </ul>
 <% end %>
