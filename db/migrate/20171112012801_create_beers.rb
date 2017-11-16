@@ -8,7 +8,7 @@ class CreateBeers < ActiveRecord::Migration[5.1]
       t.string :image
       t.string :independent
       t.string :characteristic
-     
+
      	t.timestamps
     end
   end

@@ -5,7 +5,6 @@ class Beer < ApplicationRecord
   validates :name, presence: true
   accepts_nested_attributes_for :reviews
 
-
   def self.search(input)
   	if input 
   		search = input.downcase

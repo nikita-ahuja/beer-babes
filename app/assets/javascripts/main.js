@@ -1,10 +1,11 @@
 $(document).ready(function() {
-
+// https://github.com/Aus-Red-Pandas-2017/phase-3-guide
 $(".users.new").ready(function () {
   $('#myModal').modal('show');
   $(".btn").on('click',function(){
     $('#myModal').modal('hide');
   })
+
 });
 
 
@@ -32,6 +33,17 @@ $(".more-information").on("click", function(e){
   $(".modal-body").fadeIn("#quiz-here");
   $(this).hide();
 
+});
+
+$(document).on("keypress", function(e) {
+  if (e.keyCode == 13) {
+    console.log("pressed");
+    $(".modal-body").fadeIn("#quiz-here");
+    $(".more-information").hide();
+    $('html, body').animate({
+        scrollTop: $("#beer-formy").offset().top
+    }, 1000);
+  }
 });
 
 
