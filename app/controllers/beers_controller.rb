@@ -40,6 +40,6 @@ class BeersController < ApplicationController
 
 private
   def beer_params
-    params.require(:beer).permit(:name, :independent, :characteristic, :beer_style, reviews_attributes: [ :comments, :notes, :location, :rating, :user_id])
+    params.require(:beer).permit(:name, :independent, :characteristic, :beer_style, reviews_attributes: [ :comments, :notes, :location, :date, :rating, :user_id])
   end
 end

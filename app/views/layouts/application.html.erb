@@ -41,25 +41,14 @@
         <li class="nav-item"> <%= link_to "Beers", beers_path, :class => "navbar-link" %> </li>
         <li class="nav-item"> <a class="nav-link" href="/login">Log In</a> </li>
       <% end %>
-      <!-- <form class="navbar-form navbar-left" role="search"> -->
-      <!-- <div class="form-group"> -->
-        <li class="nav-item navbar-form navbar-left form-group"><%= render 'shared/search_bar' %></li>
-      <!-- </form> -->
-      <!-- </div> -->
-      </ul>
-      <!-- <form class="navbar-form navbar-left" role="search"> -->
-        <!-- <div class="form-group"> -->
-          <!-- <input type="text" class="form-control beer-search-bar" placeholder="Search"> -->
-          <%#= form_tag beers_path, :method => 'get', :class => "search-bar-form" do %>
-          <%#= text_field_tag :search, params[:search], :class => "form-control beer-search-bar" %>
 
-        <!-- </div> -->
-       <!--  <button type="submit" class="btn btn-default beer-search-bar-button">Search</button> -->
-       <%#= submit_tag "Search", name: nil, :class => "beer-search-bar-button" %>
-        <%# end %>
+        <li class="nav-item navbar-form navbar-left form-group"><%= render 'shared/search_bar' %></li>
+
+      </ul>
+    
       </form>
-    </div><!-- navbar-collapse -->
-  </div><!-- container-fluid -->
+    </div>
+  </div>
 </nav>
 <div class="background-image">        <!-- Intro Section -->
         <section class="view intro-2 hm-gradient">
