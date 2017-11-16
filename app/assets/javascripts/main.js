@@ -37,7 +37,7 @@ $(".more-information").on("click", function(e){
 
 $(document).on("keypress", function(e) {
   if (e.keyCode == 13) {
-    console.log("pressed");
+    e.preventDefault();
     $(".modal-body").fadeIn("#quiz-here");
     $(".more-information").hide();
     $('html, body').animate({
