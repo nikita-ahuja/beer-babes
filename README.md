@@ -1,4 +1,4 @@
-Beer Babes
+<b>Beer Babes</b>
 
 
 Beer Babes was my final capstone project while I was at Dev Bootcamp, that I completed alongside 3 teammates. It is a beer recommendation app that also cultivates a community for beer enthusiasts. If you peruse through the code, you will see that beer babes uses Ruby on Rails, AJAX, Javascript, JQuery, Bootstrap, HTML and CSS to provide a platform that is efficient, dynamic, and intuitive. Connects with Google Maps API and pending keys from Untappd.
