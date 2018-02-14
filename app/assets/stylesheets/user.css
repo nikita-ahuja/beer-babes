@@ -3,22 +3,6 @@
     top: 0px;
     padding-left: 450px; } }
 
-/*::-moz-selection {
-  background: #fed136;
-  text-shadow: none; }
-
-::selection {
-  background: #fed136;
-  text-shadow: none; }
-
-img::selection {
-  background: transparent; }
-
-img::-moz-selection {
-  background: transparent; }
-
-*/
-
 .timeline {
   position: relative;
   padding: 0;
@@ -233,7 +217,3 @@ a:active > div {
   font-size: 120% !important;
   color: black !important;
 }
-
-
-
-

@@ -1,44 +1,10 @@
-body {
-    background: asset-url("beerglassleftsmall2.jpg") no-repeat center center;
-    /*background: asset-url("beerglassleftsmall2.jpg");*/
-    /*background-color: rgba(247, 169, 0, 1);*/
-    background-repeat:no-repeat;
-    /*background-size:contain;*/
-    background-position:center center;
-    background-attachment: fixed;
-    background-size: cover;
-    /*backdrop-filter:(5px);*/
-    /*http://mdbootstrap.com/img/Photos/Others/img%20(42).jpg*/
-    /*filter: blur(5px);*/
+.user-container {
+  background-color: #FFD700;
 }
 
-
-/*.background-image {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1;
-
-  display: block;
-  background-image: asset-url("beerglassleftsmall2.jpg");
-*/
-
-/*  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
-/*}*/
-
-/*.content {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  margin-left: 20px;
-  margin-right: 20px;
-  filter: blur(0px);
-*/
+#bs-example-navbar-collapse-1 {
+  background-color: #b85534;
+}
 
 .hm-gradient .full-bg-img {
     background: -webkit-linear-gradient(45deg, rgba(83, 125, 210, 0.4), rgba(178, 30, 123, 0.4) 100%);
@@ -205,5 +171,3 @@ a > .regis-link:hover {
     font-size: 750% !important;
 
 }
-
-
